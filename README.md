@@ -5,6 +5,7 @@
 The objective of this platform is to allow for asynchrnous learning of Python, R, timeseries analysis and Findable, Accessible, Interoperable, and Reproducible (FAIR) publishing. 
 
 ## Contributors
+Deborah Khider
 
 ## Tips for contributing
 
