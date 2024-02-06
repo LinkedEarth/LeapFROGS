@@ -1,0 +1,14 @@
+
+name: LeapFROGS-env
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - seaborn
+  - cartopy
+  - pip
+  - pip:
+    - pandas
+    - matplotlib
+    - wasabi>=0.2.1,<1.1.0
