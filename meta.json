@@ -1,5 +1,5 @@
 {
-    "courseId":LeapFROGS",
+    "courseId":"LeapFROGS",
     "title": "A platform to learn FAIR science practice and publishing",
     "slogan": "An interactive course developed by LinkedEarth",
     "description": "This is a free, open source course on how to use different Data Science Techniques and Tools to make your science FAIR. It is made possible by a grant from the National Science Foundation RISE2324732. Contributions and comments on how to improve the course are welcome! To file an issue go to: https://github.com/LinkedEarth/LeapFROGS/issues",
