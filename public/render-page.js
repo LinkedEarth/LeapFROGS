@@ -119,8 +119,8 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-manifest/gatsby-ssr */ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "name": "A gentle introduction to the scientific Python ecosystem",
-    "short_name": "A gentle introduction to the scientific Python ecosystem",
+    "name": "A platform to learn FAIR science practice and publishing",
+    "short_name": "A platform to learn FAIR science practice and publishing",
     "start_url": "/",
     "background_color": "#ec625D",
     "theme_color": "#ec625D",

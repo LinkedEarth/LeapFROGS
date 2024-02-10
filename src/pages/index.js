@@ -19,19 +19,17 @@ export default ({ data }) => {
             <Logo className={classes.logo} aria-label={siteMetadata.title} />
             <section>
 
-                <h1 className={classes.subtitle}><center>Welcome to PaleoHack - Python introduction workshop</center></h1>
+                <h1 className={classes.subtitle}><center>Welcome to LeapFROGS - A platform for FAIR science practice and publishing</center></h1>
                 <div className={classes.introduction}>
                 <p></p>
 
                 <center>
                 <p>
-                    These short modules will walk you through an introduction to Python and the scientific Python stack; namely, <a href="https://numpy.org">NumPy</a>, <a href="https://pandas.pydata.org">Pandas</a>,<a href="https://matplotlib.org">Matplotlib</a>, and <a href="https://scitools.org.uk/cartopy/docs/latest/"> Cartopy</a>. These packages form the foundation upon which <a href="https://pyleoclim-util.readthedocs.io/en/master/">Pyleoclim</a> is built.
-
-                    The last two modules refer to the use of GitHub and FAIR principles.
+                    Sharing research data, software, and workflow is fundamental to building a Findable, Accessible, Interoperable, and Reusable (FAIR) open science ecosystem. Indeed, over the past decade, funders and publishers have introduced open science policies emphasizing reproducibility, recognizing increased frameworks that support the sharing of reproducible science products. 
 
                 </p>
                 <p>
-                    After these modules, you will be able to use Python more effectively for your research and work with Pyleoclim more efficiently. Remember that Pyleoclim is built upon these tools, so learning to make a plot in Matplotlib, for instance, will give you a better idea of how Pyleoclim works under the hood and how you can modify your plots.
+                    LeapFROGS is a free online platofrm that curates lecture materials on science practice and publishing, along with interactive, self-graded exercises to create self-paced learning modules on various aspects of scienctific research. After you have completed these modules, you will be able to use Python and R more effectively for your research and publish all artifacts of your research according to FAIR principles. 
                 </p>
                 <p>
                     This page runs on a python3 kernel.
