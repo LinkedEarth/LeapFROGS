@@ -9,6 +9,6 @@ dependencies:
   - cartopy
   - pip
   - pip:
-    - pandas
+    - pandas==2.1.4
     - matplotlib
     - wasabi>=0.2.1,<1.1.0
