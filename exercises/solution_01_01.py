@@ -1,1 +1,1 @@
-print("I love doing paleoclimate research with Python")
+print("I love doing geoscience research with Python")

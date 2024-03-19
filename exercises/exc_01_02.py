@@ -1,4 +1,1 @@
-mylist =[___]
-
-for item in ___:
-    print(___)
+temperature = ------------

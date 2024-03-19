@@ -1,4 +1,1 @@
-mylist = ['Marine Sediment', 'Coral', 'Ice', 'Wood']
-
-for item in mylist:
-    print("I study paleoclimate using "+item)
+temperature = 25*9/5+32

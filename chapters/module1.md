@@ -1,7 +1,7 @@
 ---
 title: 'Module 1: Introduction to Python'
 description:
-  'In this module, you will learn how to write basic Python code. Make sure that you go through the material provided by Project Pythia before attempting the exercises. Note that the first time you build the Binder, this may take some time. Also do not navigate away from the code block (e.g., by opening another exercise) as this will stop the execution.'
+  'In this module, you will learn how to write basic Python code. Make sure that you go through the material provided before attempting the exercises. You have two solutions to attempt the exercise (1) Write directly into the console and click `run code`. You will be told whether your get the correct number. If stuck, you can ask for a hint or show the solution. Note that the first time you do this, a cloud server will be set up and it may take some time. Also do not navigate away from the code block (e.g., by opening another exercise) as this will stop the execution. (2) Attempt this on your local machine and use the Show solution tab to verify that you did the exercise correctly.'
 prev: null
 next: /module2
 type: chapter
@@ -15,26 +15,21 @@ Python is widely used in the scientific community and it is a great tool to help
 
 We will present you with the most important reasons to start using Python in the following [link](https://foundations.projectpythia.org/foundations/why-python.html).
 
+Convinced? Now, it's time to install Python on your local machine. You can follow [this guide](https://www.datacamp.com/blog/how-to-install-python). We recommend going through Anaconda for Mac, Linux and Windows machines as this will make the setup easier. 
+
 
 </exercise>
 
+
 <exercise id="2" title = "Getting Started with Python">
 
-Now that you know why you should be learning Python, let's get started!
+Now that you know why you should be learning Python, let's get started! One of the first thing you usually do when learning a new computer language is to print "Hello World" to make sure that everything has been installed correctly. 
 
-Read the [Quickstart zero to Python](https://foundations.projectpythia.org/foundations/quickstart.html) article and try to run the code using Binder.
-
-*Tip*: Make sure you open the Binder link under the "Rocket Ship" in another window. This may take a while to build so you may want to have it run in the background while you read the article).
-
-But what exactly is Binder? Binder allows you to run code in a pre-defined environment without installing anything on your computer. The environment is installed on the Binder servers. One of the features of Binder is that it has no memory. So once you close your Binder session, none of the variables or files you download on the server will be there. Remember this as you work through the exercises. Each block of code launches a different Binder. Therefore, if you create a variable in Exercise 3, it's not available in Exercise 4 unless you create it again.
-
-Once you are done with the tutorials, complete the exercises below to test your understanding!
+In Python, all you have to do is write `print("Hello World!")`. So let's try this with another sentence. 
 
 Be patient - it might take a few minutes the first time you run the code. But it usually speeds up.
 
-**Question:**
-
-1. Print "I love doing paleoclimate research with Python" on the console.
+**Question:** Print "I love doing geoscience research with Python" on the console.
 
 <codeblock id="01_01">
 
@@ -43,82 +38,87 @@ Remember the print command!
 </codeblock>
 
 </exercise>
-<exercise id="3" title = "Playing with lists">
 
-**Question:**
+<exercise id="3" title="Numbers">
 
-Lists are one of the basic elements in Python and allows you to build more sophisticated objects. Pyleoclim does rely on this structure for some of its functionalities. Lists are also a great way to loop through information.
+Let's start about learning number and math with Python. Although [numpy](https://numpy.org) is the most widely used library to deal with math for science purposes, it is good to start with the basics of what Python offers out of the box.
 
-1. Create a list with the following archives: `Marine Sediment`, `Coral`, `Ice`, `Wood`
-2. Loop over the list to print: "I study paleoclimate using " [archive]
+Number in Python works pretty much like everywhere else and the basic math that you have learned will apply to Python. Follow the links to look at the basic operation:
+
+* [Numbers in Python](https://docs.trinket.io/getting-started-with-python#/numbers/numbers-in-python)
+* [Addition, sutraction, multiplication, division](https://docs.trinket.io/getting-started-with-python#/numbers/addition-subtraction-multiplication-division)
+* [Modulus operations](https://docs.trinket.io/getting-started-with-python#/numbers/mods)
+* [Exponents](https://docs.trinket.io/getting-started-with-python#/numbers/exponents) - This one can be a little tricky in Python
+* [Order of Operations](https://docs.trinket.io/getting-started-with-python#/numbers/order-of-operations)
+
+**Question:** What is 25C in Fahrenheit?
 
 <codeblock id="01_02">
-You can create a string by attaching two strings together by using `+`.
 
-For instance,
-
-```
-str1 = "I love Python"
-str2 = " and I can't wait to use it in paleoclimate research"
-
-str = str1 + str2
-```
-
-str is now "I love Python and I can't wait to use it in paleoclimate research"
+Remember orders of operation!
 
 </codeblock>
-</exercise>
 
-</exercise>
-<exercise id="4" title = "Playing with dictionaries">
-
-Ever wondered to LiPD files when you open them in Python? They become dictionaries. In fact, all objects can be exported to dictionaries to allow for faster exploring. In the following questions, we will ask you to create a small version of a LiPD-like structure (in the sense that it will have information about location and data). LiPD is more complex but the principles still apply.
-
-**Question:**
-
-1. Create a dictionary called `dataset1`, that have the following keys: `archiveType`, `geo`, `data`.
-2. Set the value for archiveType to `marinesediment`
-3. Set the value for `geo` to another dictionary with keys `lat` and `lon`. The `lat` value is `-5` and the `lon` value is `140`
-4. Set the value for `data` to a dictionary with keys `values` (set to a list of `[1,2,3]`) and `units` (set to `N/A`)
-5. Return the value of the latitude information into a new variable called `latitude`
+**Question:** What is the area of a circle with a radius of 5cm? Assume that the value of pi is 3.14159.
 
 <codeblock id="01_03">
 
-When using nested dictionaries, you can access the value in the nested dictionary by chaining the keys.
-
-</codeblock>
-
-What happens if you don't know which keys are available to you? You can print it out as follows:
-
-<codeblock id="01_04">
+Remember the rules regarding exponents!
 
 </codeblock>
 
 </exercise>
 
-<exercise id="6" title = "Basic introduction to NumPy">
+<exercise id="4" title="Logic">
 
-~~~
-NumPy is the fundamental package for scientific computing in Python.
-It is a Python library that provides a multidimensional array object,
-various derived objects (such as masked arrays and matrices), and an
-assortment of routines for fast operations on arrays, including
-mathematical, logical, shape manipulation, sorting, selecting, I/O,
-discrete Fourier transforms, basic linear algebra, basic statistical
-operations, random simulation, and much more.
-- NumPy Documentation
-~~~
+Let's now turn our attention to handling inequalities, i.e. things that are either True or False and how we can use them to write codes. Read through the following modules before attempting the exercises:
 
-Pyleoclim makes extensive use of NumPy for its functionalities. If you need to dig more into the code, you will need to understand the basics of NumPy arrays. Module 4 will dig more into all its functionalities.
+* [Booleans](https://docs.trinket.io/getting-started-with-python#/logic/booleans)
+* [Boolean expressions](https://docs.trinket.io/getting-started-with-python#/logic/boolean-expressions)
+* [Combining Boolean expression](https://docs.trinket.io/getting-started-with-python#/logic/combining-boolean-expressions)
 
-**Question:**
+Don't forget theses! They become very useful when combined with conditionals and we will revisit them in a later exercise!
 
-1. Create a NumPy array that starts at 0, ends at 1000, with 1001 points and save it into a variable called `time`
-2. What is the value of time at index 20? Return this value into the variable `time_index`
+</exercise>
+
+<exercise id="5" title="Variables">
+
+As you may have noticed with the previous examples, in some instance, the numbers are assigned to a variable (e.g., temperature). Variables in computer science always contain a name and a value.There are two ways to do variable assignments:
+
+* Type the name of the variable, then `=`, then the value as we have seen before.
+* Ask a user for an input. You can do so by using the [`input` function](https://www.geeksforgeeks.org/taking-input-in-python/). This functionality can be useful when you need to share code with a with other researchers with minimum coding experience as it will slowly guide them through assigning values. Remember that a value can be many things - including text!-, which can make it valuable to promp someone for a file path. In practice, however, you will find that you will most often assign variable using the `=` sign between name and value. 
+
+**Question:** Create the variables `temperature` and `units` and assign them the values of `14` and `degC` respectively. 
+
+<codeblock id="01_04">
+
+Using the `=` sign for variable assignment. Remember how to enter strings in Python!
+
+</codeblock>
+
+This brings an interesting question. We assigned an integer to one variable and a string to another. But as we will see, not every operation can be performed on every type of variables. If you want to know what your variable is, all you have to do is `type(variable)`. Doing this now would be silly but as we start playing with more toolboxes, knowing what you have assigned to your variable or what a function returns will become more and more important! 
+
+</exercise>
+
+<exercise id="6" title="Words and Letters">
+
+Now that we have talked about numbers and booleans, let's have a discussion about text, otherwise known as strings. You have seen a string already ("Hello World"). Let's see how we can add (yes, add) strings and perform other operations. Look at the lessons below (although keep in mind that in Python3, which you will be using, the print command requires parentheses.):
+
+* [Changing Text](https://docs.trinket.io/getting-started-with-python#/changing-text/changing-text)
+* [Slicing Text, part 1](https://docs.trinket.io/getting-started-with-python#/changing-text/slicing-text-part-1)
+* [Slicing Text, part 2](https://docs.trinket.io/getting-started-with-python#/changing-text/slicing-text-part-1)
+
+There are many other operations that you can do on strings:
+* Concatenation: `"I love " + "geoscience"` will give you `"I love geoscience"`
+* You can check whether a word is in a sentence. `"are" in "Rocks are a geologist's dream"` will return the boolean `True`. You can also use the `.upper()` and `.lower()` functions to make the match more flexible. In fact, there is an entire way of looking for matched in strings called [regular expression](https://en.wikipedia.org/wiki/Regular_expression) or regex. Regex is not unique to Python. In fact, you could almost consider it its own separate language inside Python to create more flexible queries. 
+
+**Question:** Consider the following sentence: 'The law of superposition, a major principle of stratigraphy, states that within a sequence of layers of sedimentary rock, the oldest layer is at the base and that the layers are progressively younger with ascending order in the sequence.'
+
+Write a code that will retrieve the word 'superposition'.
 
 <codeblock id="01_05">
 
-1-D NumPy arrays can be indexed the same way as lists.
+Remember that Python uses zero-based indexing and that the end must be inclusive.  
 
 </codeblock>
 
