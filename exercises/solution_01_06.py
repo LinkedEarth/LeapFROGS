@@ -1,0 +1,1 @@
+minerals = ['Talc','Gypsum','Calcite','Fluorite','Apatite','Feldpsar','Quartz','Topaz','Corundum','Diamond']

@@ -1,0 +1,13 @@
+def test():
+    # Here we can either check objects created in the solution code, or the
+    # string value of the solution, available as __solution__. A helper for
+    # printing formatted messages is available as __msg__. See the testTemplate
+    # in the meta.json for details.
+
+    # If an assertion fails, the message will be displayed
+
+    ans = ['Geomorphology','Paleoceanography','Tectonics', "Data Science","AI","R","Timeseries"]
+   
+    assert l == ans, "Remember that Python uses zero-index!"
+
+    __msg__.good("Well done!")

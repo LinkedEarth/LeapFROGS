@@ -1,1 +1,1 @@
-temperature = ------------
+temperature = _____________
