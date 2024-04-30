@@ -226,12 +226,12 @@ You can change the items in a dictionary.
 
 So far we have talked about data types, variables and how to store multiple items. So let's start using these to take actions. The first action that one takes in programming (and in life) is to act conditionally; i.e., if the theater near me doesn't show the movie I like, then go to another theater. *[If statements](https://docs.trinket.io/getting-started-with-python#/conditionals/if-statements)* act similarly in computing.
 
-An *if statement* starts with two parts, first ascertain if something is True or not, then take an action. If you need to take another action if the first assession is not what you want, then you need to provide another action.
+An *if statement* starts with two parts, first ascertain if something is True or not, then take an action. If you need to take another action if the first assertion is not what you want, then you need to provide another action.
 
 Look at the code below. Without running it, what do you think it will return? (look at the hint to see if you get it right.)
 
 <codeblock id="01_10">
-Remember your logic lesson! Here we are trying to ascertain whether the field is Geoscience, which it is. Then that first statement is in fact True, and the action underneath was taken.  
+Remember your logic lessons! Here we are trying to ascertain whether the field is Geoscience, which it is. Then that first statement is in fact True, and the action underneath was taken.  
 </codeblock>
 
 You can also make multiple assertions using the [elif](https://docs.trinket.io/getting-started-with-python#/conditionals/if-statements#elif) command.
@@ -250,7 +250,7 @@ If needed, you can also [nest *if statements*](https://docs.trinket.io/getting-s
 
 In programming, a loop allows you to repeat the execution of a block of code until a certain condition is met. We will be considering two types: the *while loop* and the *for loop*.
 
-- **[while loops](https://docs.trinket.io/getting-started-with-python#/loops/while-loops)** tells the computer to do something while a condition is True. If the condition is False, nothing will happen. Be careful with while loops! It is very easy to forget to increment a variable and get into an infinite loop of True.
+- **[while loops](https://docs.trinket.io/getting-started-with-python#/loops/while-loops)** tell the computer to do something while a condition is True. If the condition is False, nothing will happen. Be careful with while loops! It is very easy to forget to increment a variable and get into an infinite loop, which is hard to get out of!
 
 **Question:** Let's play a game! Initialize a variable x with a value of 100. While x is more than 10, keep halving x.
 
@@ -258,7 +258,7 @@ In programming, a loop allows you to repeat the execution of a block of code unt
 Make sure to return the answer of each iteration into the same variable as in the while loop.
 </codeblock>
 
-- **[for loops](https://docs.trinket.io/getting-started-with-python#/loops/for-loops)** instruct the computer to repeat the same code for a bunch of values.
+- **[for loops](https://docs.trinket.io/getting-started-with-python#/loops/for-loops)** instruct the computer to repeat the same code for set of specified values.
 
 **Question**:
 1. Create a list with the following archives: `Marine Sediment`, `Coral`, `Ice`, `Wood`
@@ -266,10 +266,10 @@ Make sure to return the answer of each iteration into the same variable as in th
 3. Store the number in a new list called `nbr_str`
 
 <codeblock id="01_13">
-To do this, you must first create an empty list to store your values. Then remember how to add to a list (append). Finally, don't forget about len function to get the length of a string.
+To do this, you must first create an empty list to store your values. Then remember how to add to a list (append). Finally, don't forget about the len() function to get the length of a string.
 </codeblock>
 
-That was a whirlwind aroud basic Python functionalities! In addition to the resources presented in all the modules, we have found that the [Quickstart Guide](https://foundations.projectpythia.org/foundations/quickstart.html) from Project Pythis can be particularly useful!
+That was a whirlwind around basic Python functionalities! In addition to the resources presented in all the modules, we have found that the [Quickstart Guide](https://foundations.projectpythia.org/foundations/quickstart.html) from Project Pythia can be particularly useful!
 
 </exercise>
 
@@ -278,7 +278,7 @@ That was a whirlwind aroud basic Python functionalities! In addition to the reso
 
 Great! We have talked about basic functionalities and hopefully, you are starting to see how they can be used together to write code. Now let's talk about functions.
 
-[Functions](https://www.w3schools.com/python/python_functions.asp) are blocks of code that only runs when it is called. One advantage of functions is that you can pass parameters to them, modifying their behavior when they are called.
+[Functions](https://www.w3schools.com/python/python_functions.asp) are blocks of code that only run when it is called. One advantage of functions is that you can pass parameters to them, modifying their behavior when they are called.
 
 **Question**:
 
@@ -286,25 +286,25 @@ The [Caesar Cypher](https://en.wikipedia.org/wiki/Caesar_cipher) is one of the s
 
 Write a function to encode the caesar cypher. Your function should support both uppercase and lowercase input.
 Arguments:
-- message: string. The message to be encrypted. It only contains English alphabet, i.e., a-z and A-Z characters in addition to spaces. This argument is not optional.
-- shift: int. Shift direction and steps. This argument is optional, with a default value of 5.
+- message: string. The message to be encrypted. It only contains the English alphabet, i.e., a-z and A-Z characters in addition to spaces. This argument is not optional.
+- shift: integer. Shift direction and steps. This argument is optional, with a default value of 5.
 
 Run your cypher for two use cases: "I love geoscience" and "Geology ROCKS" with the default value.
 
 <codeblock id="01_14">
-A few things: (1) `ans+=2` is the same as `ans=ans+2` assuming that ans is a integer, (2) remember how to set the optional values for arguments (you just need to specifiy the value in the function call), (3) you can check for multiple conditions using `elif`.
+A few things: (1) `ans+=2` is the same as `ans=ans+2` assuming that ans is a integer, (2) remember how to set the optional values for arguments (you just need to specify the value in the function call), (3) you can check for multiple conditions using `elif`.
 </codeblock>
 
 Writing functions is useful when you need to execute the same block of code many times and you need to change the value of the arguments. When writing functions, you always need to keep in mind who you are writing them for. As you will discover when you start coding for your own research, you will be relying on functions that others have written. Many years from now, you may also want to go back to a function that you have written while a graduate student. So there are a few rules to keep in mind that will help everyone reuse your work:
 1. Documentation. At the very least, put comments in your function (as in the exercise above) to explain to someone else (including you future self) why the line of code is important. Even better, think about adding [docstrings](https://www.geeksforgeeks.org/python-docstrings/) that will document what the function is for, what arguments are passed and what they mean, and what the function should return.
-2. Error handling. In the previous example, we told you to use English charaters. What happened if you don't? Well, you will get an error message but not a very useful one to help you fix the problem (in this case in the input). Python has very rich [error handling](https://docs.python.org/3/tutorial/errors.html) that can use to give the users a better explanation as to why the code failed. In this case, another `elif` could have been used to return an error if a non-English charater was discovered.
-3. Give your function a meaningful name. The example above clearly states that one should expect a ceasar cypher, even without reading documentation for the function. Try to do so as much as possible, it will help you!
+2. Error handling. In the previous example, we told you to use English characters. What happens if you don't? Well, you will get an error message, but not a very useful one to help you fix the problem (in this case in the input). Python has very rich [error handling](https://docs.python.org/3/tutorial/errors.html) that gives the users rich explanations as to why the code failed. In this case, another `elif` could have been used to return an error if a non-English character was discovered.
+3. Give your function a meaningful name. The example above clearly states that one should expect a Caesar cypher, even without reading documentation for the function. Try to do so as much as possible, it will help you!
 
 </exercise>
 
 <exercise id ='11' title="Classes/Objects">
 
-Python is an object-oriented programming (OOP) language. OOP is not a computer languague but rather a paradigm that is implemented in many langagues. In [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming), the progamming revolves around the creation of objects, which contain data (and associated metadata) in the form of attributes and code in the form of methods. Read [this lesson](https://www.w3schools.com/python/python_classes.asp) to learn how to create objects and listen to [this tutorial](https://youtu.be/LJaQBFMK2-Q?t=78) for an introduction on objects.
+Python is an object-oriented programming (OOP) language. OOP is not a computer language but rather a paradigm that is implemented in many languages. In [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming), the programming revolves around the creation of objects, which contain data (and associated metadata) in the form of attributes and code in the form of methods. Read [this lesson](https://www.w3schools.com/python/python_classes.asp) to learn how to create objects and listen to [this tutorial](https://youtu.be/LJaQBFMK2-Q?t=78) for an introduction on objects.
 
 Read [this article](https://www.coursera.org/articles/object-oriented-programming-languages#) on why you should learn OOP.  
 
@@ -332,6 +332,6 @@ Here are additional resources to learn Python. Bookmark them! They may come hand
 - Tomas Beuzen [Python Programming for Data Science](https://www.tomasbeuzen.com/python-programming-for-data-science/README.html).
 - Software carpentry [Programming with Python](https://swcarpentry.github.io/python-novice-inflammation/)
 
-Also, do not hesitate to ask Large Language Models such as ChatGPT and Claude. Although they may not always give you the correct answers, especially for niche packages (read [our blog](https://medium.com/cyberpaleo/pyleoclim-and-chatgpt-f8f1de167044))
+Also, do not hesitate to ask Large Language Models such as ChatGPT and Claude. They may not always give you the correct answers, especially for niche packages (read [our blog](https://medium.com/cyberpaleo/pyleoclim-and-chatgpt-f8f1de167044)), but they can point you in the right general direction.
 
 </exercise>
