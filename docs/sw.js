@@ -26,38 +26,38 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-1d73e750268755aadc5b.js"
+    "url": "webpack-runtime-31e96415d80469bbd65c.js"
   },
   {
-    "url": "styles.d8ceeda15cd69ede02d8.css"
+    "url": "styles.8ad1e4e48b0da8508005.css"
   },
   {
-    "url": "styles-407fe62976dc5310c43e.js"
+    "url": "styles-0ec71dd62c66cb95665c.js"
   },
   {
-    "url": "framework-999a01e9e4c894cffffe.js"
+    "url": "framework-ddca7dd446fc76edf1f1.js"
   },
   {
-    "url": "edea2dd3-ae17d9a8c815f84639bf.js"
+    "url": "edea2dd3-b986c529c162e29b8baa.js"
   },
   {
-    "url": "d659406a-e6d04168087efb257cd9.js"
+    "url": "d659406a-6ad0a534f2f8b8e5b0e9.js"
   },
   {
-    "url": "f65a48b9-519ef81738652a725034.js"
+    "url": "f65a48b9-ff9d94ed2729274f266e.js"
   },
   {
-    "url": "e6d6ed13-7fa29c55074e6467c501.js"
+    "url": "e6d6ed13-f66b80e7d04ca230012c.js"
   },
   {
-    "url": "app-9665833905ede66d943a.js"
+    "url": "app-4c5178681ec49dc3f862.js"
   },
   {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-36dc033f967ae9fe9cda.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-44ceac2081f421b30e8f.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "93b0c74f503ab010ea658e74e6e291f9"
+    "revision": "25dc1067becc9597e57e71bd79e591ea"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -65,14 +65,14 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "19b35ab0310a9e885d753f138e832343"
+    "revision": "d2005ede5f5764c9a597250a8851b180"
   },
   {
-    "url": "polyfill-7ced8295869eb983463c.js"
+    "url": "polyfill-7efc751b3f47cab2dd61.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "e5187e357f9833c4568e13596b09ab82"
+    "revision": "309af307f7f2d33a07b45c899a3c031a"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -91,12 +91,12 @@ const { NavigationRoute } = workbox.routing
 
 const navigationRoute = new NavigationRoute(async ({ event }) => {
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/ec_workshops_py`), ``)
+  pathname = pathname.replace(new RegExp(`^/LeapFROGS`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/ec_workshops_py/app-9665833905ede66d943a.js`))) {
+  if (!resources || !(await caches.match(`/LeapFROGS/app-4c5178681ec49dc3f862.js`))) {
     return await fetch(event.request)
   }
 
@@ -109,7 +109,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/ec_workshops_py/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/LeapFROGS/offline-plugin-app-shell-fallback/index.html`
   return await caches.match(offlineShell)
 })
 
