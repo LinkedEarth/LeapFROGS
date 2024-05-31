@@ -10,7 +10,7 @@ id: 2
 
 <exercise id="1" title="Scientific Python Stack">
 
-The Scientific Python (SciPy) stack consists of fundamental libraries for doing science with Python. Read [this article](https://medium.com/k2-data-science/ds-fundamentals-scipy-stack-dcfc48576f3), which gives you an overview of the core packages. 
+The Scientific Python (SciPy) stack consists of fundamental libraries for doing science with Python. Read [this article](https://medium.com/k2-data-science/ds-fundamentals-scipy-stack-dcfc48576f3), which gives you an overview of the core packages.
 
 Most (if not all) of the scientific libraries that you will be using throughout your career build upon these fundamental libraries, which is why we are giving you an introduction to them in this module.
 
@@ -30,7 +30,7 @@ Read the following [article](https://foundations.projectpythia.org/foundations/g
 
 Then, read this [link](https://foundations.projectpythia.org/foundations/jupyterlab.html) to learn particularly about JupyterLab. Follow the exercises on an extra tab/window using the provided [Binder](https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/foundations/jupyterlab.ipynb).
 
-We recommend that you install either [Jupyter Notebook](https://jupyter.org/install) or [Jupyter lab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) on your computer for your own scientific needs. 
+We recommend that you install either [Jupyter Notebook](https://jupyter.org/install) or [Jupyter lab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) on your computer for your own scientific needs.
 
 </exercise>
 
@@ -44,7 +44,7 @@ mathematical, logical, shape manipulation, sorting, selecting, I/O,
 discrete Fourier transforms, basic linear algebra, basic statistical
 operations, random simulation, and much more.- NumPy Documentation
 
-Most (if not all) Python scientific libraries make use of Numpy under the hood. Therefore, if you need to dig into the code of your favorite libraries, you will need to understand [Numpy arrays](https://foundations.projectpythia.org/core/numpy/numpy-basics.html) and how to work with them. 
+Most (if not all) Python scientific libraries make use of Numpy under the hood. Therefore, if you need to dig into the code of your favorite libraries, you will need to understand [Numpy arrays](https://foundations.projectpythia.org/core/numpy/numpy-basics.html) and how to work with them.
 
 If you are new to programming, your first question might be: "What is an array?". An array is a collection of values (numbers, strings, or such), whose position in the computer's memory is such that it can be computed from its given key. Coming from the Excel world, you could regard a spreadsheet as a 2D array; a single column of that spreadsheet would be a 1D array. Arrays, however, are far more general, and can assume any dimension, which makes them great for storing large quantities of information.
 
@@ -67,7 +67,7 @@ Once you have mastered the basics, try the following exercises:
 
 </codeblock>
 
-**Question**: It is often useful to create pseudo-data to test out a function or report an issue. For instance, if you want to make sure that the spectral method you are employing for your work is appropriate, it is useful to create a timeseries with known periodicities and a known trend/noise. 
+**Question**: It is often useful to create pseudo-data to test out a function or report an issue. For instance, if you want to make sure that the spectral method you are employing for your work is appropriate, it is useful to create a timeseries with known periodicities and a known trend/noise.
 
 In this case, you may need to create a time and value axis that would mimic a time series.
 
@@ -185,7 +185,7 @@ Remember that they are more than one way to skin a cat with Pandas. Choose the s
 
 ## Querying
 
-Pandas has a [querying functionality](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.html) that allows you to filter the dataframe according to specific criteria. For an example on how to use querying functionality, follow [this tutorial](https://www.geeksforgeeks.org/pandas-query-method/). You can also see an example of use in [this notebook](http://linked.earth/PyleoTutorials/notebooks/L2_principal_component_analysis.html#data-wrangling-and-processing). 
+Pandas has a [querying functionality](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.html) that allows you to filter the dataframe according to specific criteria. For an example on how to use querying functionality, follow [this tutorial](https://www.geeksforgeeks.org/pandas-query-method/). You can also see an example of use in [this notebook](http://linked.earth/PyleoTutorials/notebooks/L2_principal_component_analysis.html#data-wrangling-and-processing).
 
 ## Resources and references
  - [Pandas cheat sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
@@ -225,7 +225,7 @@ fig, ax = plt.subplots(figsize=(10, 6))
 ```
 Give it a try!
 
-## Plot custamization
+## Plot customization
 
 We now explore Matplotlib's infinite customizability. All default parameters are stored in a dictionary called `rcParams`.
 rc stands for "runtime configuration" and any changes to `plt.rcParams` will stay for all subsequent plots in your session. These parameters can be customised and [saved for later use](https://matplotlib.org/stable/tutorials/introductory/customizing.html#customizing-with-matplotlibrc-files).
@@ -365,7 +365,7 @@ The only difficulty is to specify the projection as 3D using ax = plt.axes(proje
 
 Does this add anything to the example of exercise 8? Why or why not? (note: the answer here is a matter of personal preference: some people see well in 3D, some people don't.)
 
-## Resources and references 
+## Resources and references
 
 https://pbpython.com/effective-matplotlib.html
 
@@ -558,19 +558,19 @@ See the previous codeblock and re-use at will! Only a few minor tweaks are neede
 
 ### Statistics
 
-- [Seaborn](https://seaborn.pydata.org) for statistical data visualization. The documentation provides a [tutorial](https://seaborn.pydata.org/tutorial.html) to get you started and the gallery is full of [code snippets](https://seaborn.pydata.org/examples/index.html) that you can re-use. 
+- [Seaborn](https://seaborn.pydata.org) for statistical data visualization. The documentation provides a [tutorial](https://seaborn.pydata.org/tutorial.html) to get you started and the gallery is full of [code snippets](https://seaborn.pydata.org/examples/index.html) that you can re-use.
 - [Statsmodel](https://www.statsmodels.org/stable/index.html) for the estimation of many different statistical models
 
 ### Machine (deep) learning
 
 - [Scikit-learn](https://scikit-learn.org/stable/) is a machine learning library with many pre-processing steps not only relevant to machine learning but other time series analysis.
-- [Pytorch](https://pytorch.org) for deep learning. 
+- [Pytorch](https://pytorch.org) for deep learning.
 
 ### Gridded dataset
 - [xarray](https://docs.xarray.dev/en/stable/) is the library to deal with multi-dimensional arrays in Python. Project Pythia provides some [tutorials](https://foundations.projectpythia.org/core/xarray.html) to get you started with this library.
 
 ### Visualization
-There are many Python libraries that can be used to visualize data in Python. This [blog post](https://open-data-analytics.medium.com/top-10-growing-data-visualization-libraries-in-python-in-2023-813d1aefedcc) provides you a good place to start. 
+There are many Python libraries that can be used to visualize data in Python. This [blog post](https://open-data-analytics.medium.com/top-10-growing-data-visualization-libraries-in-python-in-2023-813d1aefedcc) provides you a good place to start.
 
 ## Galleries
 
@@ -583,6 +583,6 @@ The past 5 years have seen an explosion of Python Galleries, which presents an a
 ## Getting help
 
 - [Stackoverflow](https://stackoverflow.com) is a great resource to find answers to commonly asked questions
-- Increasingly, AI assistants such as [ChatGPT](https://chatgpt.com), [Claude](https://claude.ai), and [GitHub copilot](https://github.com/features/copilot?ef_id=_k_Cj0KCQjwpNuyBhCuARIsANJqL9P3xR8v1AZq0jUovonoc3FPiJThPsbrb7ikIpL6ygbzYjHEbTRO4rMaAsPiEALw_wcB_k_&OCID=AIDcmmc3fhtaow_SEM__k_Cj0KCQjwpNuyBhCuARIsANJqL9P3xR8v1AZq0jUovonoc3FPiJThPsbrb7ikIpL6ygbzYjHEbTRO4rMaAsPiEALw_wcB_k_&gad_source=1&gclid=Cj0KCQjwpNuyBhCuARIsANJqL9P3xR8v1AZq0jUovonoc3FPiJThPsbrb7ikIpL6ygbzYjHEbTRO4rMaAsPiEALw_wcB) can help you write code efficiently. The trick is to (1) write proper algorithm (i.e., the recipe of what you are trying to do), (2) ask the relevant prompt to the AI, and (3) evaluate the answer. 
+- Increasingly, AI assistants such as [ChatGPT](https://chatgpt.com), [Claude](https://claude.ai), and [GitHub copilot](https://github.com/features/copilot?ef_id=_k_Cj0KCQjwpNuyBhCuARIsANJqL9P3xR8v1AZq0jUovonoc3FPiJThPsbrb7ikIpL6ygbzYjHEbTRO4rMaAsPiEALw_wcB_k_&OCID=AIDcmmc3fhtaow_SEM__k_Cj0KCQjwpNuyBhCuARIsANJqL9P3xR8v1AZq0jUovonoc3FPiJThPsbrb7ikIpL6ygbzYjHEbTRO4rMaAsPiEALw_wcB_k_&gad_source=1&gclid=Cj0KCQjwpNuyBhCuARIsANJqL9P3xR8v1AZq0jUovonoc3FPiJThPsbrb7ikIpL6ygbzYjHEbTRO4rMaAsPiEALw_wcB) can help you write code efficiently. The trick is to (1) write proper algorithm (i.e., the recipe of what you are trying to do), (2) ask the relevant prompt to the AI, and (3) evaluate the answer.
 
 </exercise>
