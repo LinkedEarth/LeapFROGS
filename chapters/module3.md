@@ -156,46 +156,50 @@ The training materials can be accessed [here](https://figshare.com/ndownloader/f
 **Questions**
 
 What are surrogates?
+
 <choice id="03-09">
 <opt text="Surrogate is another name for duplicate"">
 No.
- </opt>
- <opt text="Estimators of timeseries properties">
- No.
-  </opt>
+</opt>
+<opt text="Estimators of timeseries properties">
+No.
+</opt>
 <opt text="Helper timeseries that emulate aspects of the original", correct="true">
 Yes indeed
 </opt>
 </choice>
 
 Why are surrogates needed in the first place?
+
 <choice id="03-10">
 <opt text="They are not needed; their use is entirely optional"">
 If only!
- </opt>
+</opt>
 <opt text="They are needed when assumptions of standard statistical tests are violated", correct="true">
 Yes, and that is nearly every time in the geosciences.
 </opt>
 </choice>
 
-In Pyleoclim, how does one invoke phase-randomized surrogates, e.g. for a correlation test?
+In `Pyleoclim`, how does one invoke phase-randomized surrogates, e.g. for a correlation test?
+
 <choice id="03-11">
 <opt text="using `method = 'phaseran'` in the `correlation()` function call", correct="true">
 Yes, it's that simple.
- </opt>
+</opt>
 <opt text="using `method = 'ebisuzaki'` in the `correlation()` function call">
-No, sorry.
+It is indeed Ebisuzaki's method, but it is known under a more general name in the code.
 </opt>
 <opt text="They are not available in Pyleoclim">
 You really think we would do that to you?
- </opt>
+</opt>
 </choice>
 
-In Pyleoclim, what is the surrogate NOT to invoke to test the significance of spectral peaks?
+In `Pyleoclim`, what is the type of surrogate NOT to invoke to test the significance of spectral peaks?
+
 <choice id="03-12">
 <opt text="phaseran", correct="true">
-Yes, because it simply duplicates the spectrum of the target.
- </opt>
+Yes, because phase randomization simply duplicates the spectrum of the target, so it cannot help evaluate spectra.
+</opt>
 <opt text="AR(1) surrogates (`ar1sim`)">
 That one is good
 </opt>
@@ -215,13 +219,13 @@ How would you find out what spectral methods are available in `Pyleoclim` (sever
 
 <choice id="03-13">
 <opt text="Use the documentation of `Series.spectral()`: https://pyleoclim-util.readthedocs.io/en/latest/core/api.html#pyleoclim.core.series.Series.spectral", correct="true">
-Correct.
+Remember what they said about reading the manuals?
 </opt>
 <opt text="Look at the [dedicated PyleoTutorial](http://linked.earth/PyleoTutorials/notebooks/L2_spectral_analysis.html)", correct="true">
 Correct.
 </opt>
 <opt text="Ask [ChatGPT](https://medium.com/cyberpaleo/pyleoclim-and-chatgpt-f8f1de167044)", correct="true">
- </opt>
+</opt>
 </choice>
 
 In `Pyleoclim`, how can one perform spectral analysis on unevenly-spaced timeseries?
@@ -231,14 +235,13 @@ In `Pyleoclim`, how can one perform spectral analysis on unevenly-spaced timeser
 Oh yes you CAN!
 </opt>
 <opt text="Regrid to a uniform time grid", correct="true">
-Correct.
 </opt>
 <opt text="Use a method designed to handle uneven gaps, like the Lomb-Scargle periodogram or the Weigted Wavelet Z-transform", correct="true">
 Correct.
 </opt>
 <opt text="Colored Noise (`CN`)">
 That one is good
- </opt>
+</opt>
 </choice>
 
 In `Pyleoclim`, how do you establish the significance of spectral peaks?
@@ -251,7 +254,7 @@ You could, but this has already been done for you in `PSD.signif_test()`.
 That one does not exist ; how did you hear about it?
 </opt>
 <opt text="Use the `signif_test()` method associated with PSD objects", correct="true">
-Correct.
+Ain't that nice?
 </opt>
 </choice>
 
@@ -259,7 +262,7 @@ In `Pyleoclim`, how do you estimate the scaling behavior of a timeseries?
 
 <choice id="03-16">
 <opt text="apply `beta_est()` to a PSD object", correct="true">
-Correct. Ain't that nice?
+Ain't that nice?
 </opt>
 <opt text="Fit a line to the spectrum using Ordinary Least Squares">
 You could, but this has already been done for you `PSD.beta_est()`.
@@ -272,17 +275,14 @@ That one does not exist ; how did you hear about it?
 Why is it sometimes desirable to remove a seasonal cycle from a geoscience series prior to conducting spectral analysis?
 
 <choice id="03-17">
-<opt text="apply `beta_est()` to a PSD object", correct="true">
-Correct. Ain't that nice?
+<opt text="The cycle might obscure more subtle signals in the series", correct="true">
+Well done.  
 </opt>
-<opt text="apply `beta_est()` to a PSD object", correct="true">
-Correct. Ain't that nice?
+<opt text="spectral analysis is about eliminating harmonics">
+It definitely isn't about that.
 </opt>
 <opt text="Fit a line to the spectrum using Ordinary Least Squares">
 You could, but this has already been done for you `PSD.beta_est()`.
-</opt>
-<opt text="Use `significance(PSD)`">
-That one does not exist ; how did you hear about it?
 </opt>
 </choice>
 </exercise>
