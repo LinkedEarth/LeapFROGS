@@ -99,7 +99,7 @@ Good, not best
   <opt text="Kendall's tau">
   Good, not best
    </opt>
-<opt text="Each statistic has pros and cons", correct="true">
+<opt text="There is no best one. Each statistic has pros and cons", correct="true">
 You win!
 </opt>
 </choice>
@@ -204,7 +204,6 @@ That one is good
  </opt>
 </choice>
 
-
 </exercise>
 
 <exercise id="5" title="Spectral Analysis">
@@ -224,7 +223,6 @@ Correct.
 <opt text="Ask [ChatGPT](https://medium.com/cyberpaleo/pyleoclim-and-chatgpt-f8f1de167044)", correct="true">
  </opt>
 </choice>
-
 
 In `Pyleoclim`, how can one perform spectral analysis on unevenly-spaced timeseries?
 
@@ -256,8 +254,6 @@ That one does not exist ; how did you hear about it?
 Correct.
 </opt>
 </choice>
-</exercise>
-
 
 In `Pyleoclim`, how do you estimate the scaling behavior of a timeseries?
 
@@ -272,7 +268,6 @@ You could, but this has already been done for you `PSD.beta_est()`.
 That one does not exist ; how did you hear about it?
 </opt>
 </choice>
-</exercise>
 
 Why is it sometimes desirable to remove a seasonal cycle from a geoscience series prior to conducting spectral analysis?
 
