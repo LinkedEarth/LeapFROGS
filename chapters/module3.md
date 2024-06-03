@@ -1,7 +1,7 @@
 ---
 title: 'Module 3: Timeseries analysis'
 description:
-  "Let's now introduce key concepts about timeseries analysis, and check that you have understood them, before moving on to practicums."
+  "Here we introduce key concepts and practicums about timeseries analysis, and check that you have understood them. The slides can be accessed as PDF files [on FigShare](https://doi.org/10.6084/m9.figshare.25939801.v4) and the practicums are available as a [JupyterBook](http://linked.earth/PyRATES_practicums_py/intro.html). Note that you can download each associated notebook (see download icon at the top of each page) and repurpose as you see fit."
 prev: /module2
 next: /module4
 type: chapter
@@ -12,7 +12,7 @@ id: 3
 
 This training introduces you to key concepts in timeseries analysis.
 
-The training materials can be accessed [here](https://figshare.com/ndownloader/files/46758307). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)) and the [introductory tutorial](http://linked.earth/PyRATES_practicums_py/notebooks/Intro_Mauna_Loa.html),
+The slides can be accessed [here](https://figshare.com/ndownloader/files/46758307). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)) and the [introductory tutorial](http://linked.earth/PyRATES_practicums_py/notebooks/Intro_Mauna_Loa.html),
  then answer the following questions:
 
 **Questions**
@@ -47,7 +47,7 @@ That is always available to you, but it is an extreme step. For one thing, there
 
 <exercise id="2" title="Data Processing">
 
-The training materials for this section can be accessed [here](https://figshare.com/ndownloader/files/46758307). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), then do the practical exercises in [Python](http://linked.earth/PyRATES_practicums_py/notebooks/signal_processing.html).
+The slides for this section can be accessed [here](https://figshare.com/ndownloader/files/46758307). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), then do the practical exercises in [Python](http://linked.earth/PyRATES_practicums_py/notebooks/signal_processing.html).
 
 
 **Questions**:
@@ -62,8 +62,6 @@ You're correct!
 The "linear" part of linear regression is that timeseries components are considered additive (up to a scaling factor). So if you know what the trend should be, whether linear or not (e.g. exponential, quadratic), it is easy to specify it to a linear model so it can be removed.
 </opt>
 </choice>
-
-
 
 Which of those filters would help remove variability from a certain frequency band?
 
@@ -83,7 +81,7 @@ That's a very interesting filter, but that's not what it does.
 
 <exercise id="3" title="Measures of Association">
 
-The training materials can be accessed [here](https://figshare.com/ndownloader/files/46731670). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), and relevant [tutorial](http://linked.earth/PyRATES_practicums_py/notebooks/Association.html), then answer the following questions:
+The slides can be accessed [here](https://figshare.com/ndownloader/files/46731670). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), and relevant [tutorial](http://linked.earth/PyRATES_practicums_py/notebooks/Association.html), then answer the following questions:
 
 **Questions**
 
@@ -151,7 +149,7 @@ That sounds impressive, but it is complete gibberish
 
 <exercise id="4" title="Surrogates">
 
-The training materials can be accessed [here](https://figshare.com/ndownloader/files/46768567). Please read the presentation, then answer the following questions:
+The slides can be accessed [here](https://figshare.com/ndownloader/files/46768567). Please read the presentation, then answer the following questions:
 
 **Questions**
 
@@ -212,7 +210,7 @@ That one is good
 
 <exercise id="5" title="Spectral Analysis">
 
-The training materials can be accessed [here](https://figshare.com/ndownloader/files/46768570). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), and relevant [tutorials](http://linked.earth/PyRATES_practicums_py/notebooks/Spectral_Analysis_Rio_Grande.html), then answer the following questions:
+The slides can be accessed [here](https://figshare.com/ndownloader/files/46768570). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), and relevant [tutorials](http://linked.earth/PyRATES_practicums_py/notebooks/Spectral_Analysis_Rio_Grande.html), then answer the following questions:
 
 **Questions**
 How would you find out what spectral methods are available in `Pyleoclim` (several possible correct answers)?
@@ -290,7 +288,7 @@ I see you like impressive words! Unfortunately, they are used in the wrong way h
 
 <exercise id="6" title="Wavelet Analysis">
 
-The training materials can be accessed [here](https://figshare.com/ndownloader/files/46768570). Please read the presentation, and relevant [tutorials](http://linked.earth/PyRATES_practicums_py/notebooks/wavelets%26coherence.html), then answer the following questions:
+The slides can be accessed [here](https://figshare.com/ndownloader/files/46768570). Please read the presentation, and relevant [tutorials](http://linked.earth/PyRATES_practicums_py/notebooks/wavelets%26coherence.html), then answer the following questions:
 
 **Questions**
 
