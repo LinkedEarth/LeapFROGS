@@ -345,6 +345,7 @@ Close, but not quite
 <opt text="ts.spectral()">
 That would generate a PSD, not a Scalogram, object.
 </opt>
+</choice>
 
 In `Pyleoclim` how can you assess the significance of the regions of a scalogram `scal`?
 
