@@ -12,7 +12,8 @@ id: 3
 
 This training introduces you to key concepts in timeseries analysis.
 
-The training materials can be accessed [here](https://figshare.com/ndownloader/files/46758307). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), then answer the following questions:
+The training materials can be accessed [here](https://figshare.com/ndownloader/files/46758307). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)) and the [introductory tutorial](http://linked.earth/PyRATES_practicums_py/notebooks/Intro_Mauna_Loa.html),
+ then answer the following questions:
 
 **Questions**
 
@@ -42,14 +43,11 @@ Binning in coarser, even intervals with some Gaussian smoothing is another possi
 That is always available to you, but it is an extreme step. For one thing, there may not be an easily accessible, alternative method for what you are trying to do. And getting to even spacing might be less painful than you think (see options above)
 </opt>
 </choice>
-
-For practical exercises in Python go [here](http://linked.earth/PyRATES_practicums_py/notebooks/Intro_Mauna_Loa.html). For exercises in R, go ...
-
 </exercise>
 
 <exercise id="2" title="Data Processing">
 
-The training materials for this section can be accessed [here](https://figshare.com/ndownloader/files/46758307). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), then do the practical exercises in [Python](http://linked.earth/PyRATES_practicums_py/notebooks/signal_processing.html) or [R](TBD).
+The training materials for this section can be accessed [here](https://figshare.com/ndownloader/files/46758307). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), then do the practical exercises in [Python](http://linked.earth/PyRATES_practicums_py/notebooks/signal_processing.html).
 
 
 **Questions**:
@@ -85,7 +83,7 @@ That's a very interesting filter, but that's not what it does.
 
 <exercise id="3" title="Measures of Association">
 
-The training materials can be accessed [here](https://figshare.com/ndownloader/files/46731670). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), and relevant tutorials in [R]() and [Python](http://linked.earth/PyRATES_practicums_py/notebooks/Association.html), then answer the following questions:
+The training materials can be accessed [here](https://figshare.com/ndownloader/files/46731670). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), and relevant [tutorial](http://linked.earth/PyRATES_practicums_py/notebooks/Association.html), then answer the following questions:
 
 **Questions**
 
@@ -211,13 +209,27 @@ That one is good
 
 <exercise id="5" title="Spectral Analysis">
 
-The training materials can be accessed [here](https://figshare.com/ndownloader/files/46768570). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), and relevant tutorials in [R]() and [Python](http://linked.earth/PyRATES_practicums_py/notebooks/Spectral_Analysis_Rio_Grande.html), then answer the following questions:
+The training materials can be accessed [here](https://figshare.com/ndownloader/files/46768570). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), and relevant [tutorials](http://linked.earth/PyRATES_practicums_py/notebooks/Spectral_Analysis_Rio_Grande.html), then answer the following questions:
 
 **Questions**
-In Pyleoclim, how can one perform spectral analysis on unevenly-spaced timeseries?
+How would you find out what spectral methods are available in `Pyleoclim` (several possible correct answers)?
 
 <choice id="03-13">
-<opt text="You cannot do that in `Pyleoclim`">
+<opt text="Use the documentation of `Series.spectral()`: https://pyleoclim-util.readthedocs.io/en/latest/core/api.html#pyleoclim.core.series.Series.spectral", correct="true">
+Correct.
+</opt>
+<opt text="Look at the [dedicated PyleoTutorial](http://linked.earth/PyleoTutorials/notebooks/L2_spectral_analysis.html)", correct="true">
+Correct.
+</opt>
+<opt text="Ask [ChatGPT](https://medium.com/cyberpaleo/pyleoclim-and-chatgpt-f8f1de167044)", correct="true">
+ </opt>
+</choice>
+
+
+In `Pyleoclim`, how can one perform spectral analysis on unevenly-spaced timeseries?
+
+<choice id="03-14">
+<opt text="You cannot do that; spectral analysis always assumes evenly-spaced data.">
 Oh yes you CAN!
 </opt>
 <opt text="Regrid to a uniform time grid", correct="true">
@@ -226,19 +238,64 @@ Correct.
 <opt text="Use a method designed to handle uneven gaps, like the Lomb-Scargle periodogram or the Weigted Wavelet Z-transform", correct="true">
 Correct.
 </opt>
-
-
 <opt text="Colored Noise (`CN`)">
 That one is good
  </opt>
 </choice>
 
+In `Pyleoclim`, how do you establish the significance of spectral peaks?
 
+<choice id="03-15">
+<opt text="Write a loop to compute spectra over surrogates, then obtain the null distribution">
+You could, but this has already been done for you in `PSD.signif_test()`.
+</opt>
+<opt text="Use `significance(PSD)`">
+That one does not exist ; how did you hear about it?
+</opt>
+<opt text="Use the `signif_test()` method associated with PSD objects", correct="true">
+Correct.
+</opt>
+</choice>
 </exercise>
+
+
+In `Pyleoclim`, how do you estimate the scaling behavior of a timeseries?
+
+<choice id="03-16">
+<opt text="apply `beta_est()` to a PSD object", correct="true">
+Correct. Ain't that nice?
+</opt>
+<opt text="Fit a line to the spectrum using Ordinary Least Squares">
+You could, but this has already been done for you `PSD.beta_est()`.
+</opt>
+<opt text="Use `significance(PSD)`">
+That one does not exist ; how did you hear about it?
+</opt>
+</choice>
+</exercise>
+
+Why is it sometimes desirable to remove a seasonal cycle from a geoscience series prior to conducting spectral analysis?
+
+<choice id="03-17">
+<opt text="apply `beta_est()` to a PSD object", correct="true">
+Correct. Ain't that nice?
+</opt>
+<opt text="apply `beta_est()` to a PSD object", correct="true">
+Correct. Ain't that nice?
+</opt>
+<opt text="Fit a line to the spectrum using Ordinary Least Squares">
+You could, but this has already been done for you `PSD.beta_est()`.
+</opt>
+<opt text="Use `significance(PSD)`">
+That one does not exist ; how did you hear about it?
+</opt>
+</choice>
+</exercise>
+
 
 <exercise id="6" title="Wavelet Analysis">
 
-The training materials can be accessed [here](https://figshare.com/ndownloader/files/46768570). Please read the presentation, and relevant tutorials in [R]() and [Python](http://linked.earth/PyRATES_practicums_py/notebooks/wavelets%26coherence.html), then answer the following questions:
+The training materials can be accessed [here](https://figshare.com/ndownloader/files/46768570). Please read the presentation, and relevant [tutorials](http://linked.earth/PyRATES_practicums_py/notebooks/wavelets%26coherence.html), then answer the following questions:
 
 **Questions**
 
