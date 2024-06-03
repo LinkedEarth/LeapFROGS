@@ -12,7 +12,7 @@ id: 3
 
 This training introduces you to key concepts in timeseries analysis.
 
-The training materials can be accessed [here](https://figshare.com/ndownloader/files/46749886). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), then answer the following questions:
+The training materials can be accessed [here](https://figshare.com/ndownloader/files/46758307). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), then answer the following questions:
 
 **Questions**
 
@@ -26,11 +26,11 @@ Many timeseries, particularly in the geosciences, are unevenly spaced. However, 
 It is true that many methods _assume_ even spacing, but that is by no means a requirement. </opt>
 </choice>
 
-If your analysis requires even spacing, what should you do (multiple answers possible):
+If your analysis requires even spacing, what should you do? (multiple answers possible):
 
 <choice id="03-02">
 <opt text="Interpolation", correct="true">
-Non-replicability of results doesn't mean that something is wrong. In fact, science advancement relies on getting more information with different data/methods and obtaining inconsistent answers.
+Interpolation is good; make sure to pick a low polynomial order (linear interpolation tends to be safest)
 </opt>
 <opt text="Binning", correct="true">
 Binning in coarser, even intervals is another possible option
@@ -49,7 +49,10 @@ For practical exercises in Python go [here](http://linked.earth/PyRATES_practicu
 
 <exercise id="2" title="Data Processing">
 
-The training materials can be accessed [here](). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), then answer the following questions:
+The training materials for this section can be accessed [here](https://figshare.com/ndownloader/files/46758307). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), then do the practical exercises in [Python](http://linked.earth/PyRATES_practicums_py/notebooks/signal_processing.html) or [R](TBD).
+
+
+**Questions**:
 
 Can linear regression help remove non-linear trends?
 
@@ -58,7 +61,23 @@ Can linear regression help remove non-linear trends?
 You're correct!
 </opt>
 <opt text="No">
-The "linear" part of linear regression is that timeseries components are considered additive (up to a scaling). So if you know what the trend should be (e.g. exponential, quadratic), it is easy to specify it to a linear model so it can be removed.
+The "linear" part of linear regression is that timeseries components are considered additive (up to a scaling factor). So if you know what the trend should be, whether linear or not (e.g. exponential, quadratic), it is easy to specify it to a linear model so it can be removed.
+</opt>
+</choice>
+
+
+
+Which of those filters would help remove variability from a certain frequency band?
+
+<choice id="03-04">
+<opt text="Bandpass filter">
+A bandpass filter does the opposite
+ </opt>
+<opt text="Notch filter", correct="true">
+You win!
+</opt>
+<opt text="Wiener filter">
+That's a very interesting filter, but that's not what it does.
 </opt>
 </choice>
 
@@ -66,18 +85,161 @@ The "linear" part of linear regression is that timeseries components are conside
 
 <exercise id="3" title="Measures of Association">
 
-The training materials can be accessed [here](https://figshare.com/ndownloader/files/46731670). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), then answer the following questions:
+The training materials can be accessed [here](https://figshare.com/ndownloader/files/46731670). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), and relevant tutorials in [R]() and [Python](http://linked.earth/PyRATES_practicums_py/notebooks/Association.html), then answer the following questions:
+
+**Questions**
+
+What is the best correlation statistic?
+
+<choice id="03-05">
+<opt text="Pearson's R">
+Good, not best
+ </opt>
+ <opt text="Spearman's rho">
+ Good, not best
+  </opt>
+  <opt text="Kendall's tau">
+  Good, not best
+   </opt>
+<opt text="Each statistic has pros and cons", correct="true">
+You win!
+</opt>
+</choice>
+
+What implicit assumption is made when testing for the significance of Pearson's R? (multiple possible answers)
+
+<choice id="03-06">
+<opt text="Data are causally related">
+Correlation says nothing about causation
+ </opt>
+<opt text="Data are independent", correct="true">
+Yes, and ... ?
+</opt>
+<opt text="Data are identically distributed", correct="true">
+Correct
+</opt>
+<opt text="Data are linearly related">
+it is true that a linear relationship is measured by R, but that does not affect the significance estimate.
+ </opt>
+</choice>
+
+Under those assumptions, the null distribution for Pearson's R is:
+<choice id="03-07">
+<opt text="a Gaussian distribution">
+Not quite
+ </opt>
+ <opt text="A Gamma distribution">
+ Nope
+  </opt>
+<opt text="Student's t distribution", correct="true">
+Yes indeed
+</opt>
+</choice>
+
+When the data are not independent, e.g. because of serial correlation, how may this test be corrected?
+<choice id="03-08">
+<opt text="Reduce the degrees of freedom as n_eff = n (1-g)/(1+g), where g is the lag-1 autocorrelation", correct="true">
+Yes, though when g is close to 1, even that is not enough.
+</opt>
+<opt text="Switch the null distribution to a Monte Carlo Markov Chain">
+That sounds impressive, but it is complete gibberish
+ </opt>
+ <opt text="Switch the test statistic to Kendall's tau">
+ No. The null distribution for Kendall's tau also assumes independence, so that won't help.
+  </opt>
+</choice>
+
+</exercise>
+
+<exercise id="4" title="Surrogates">
+
+The training materials can be accessed [here](https://figshare.com/ndownloader/files/46768567). Please read the presentation, then answer the following questions:
+
+**Questions**
+
+What are surrogates?
+<choice id="03-09">
+<opt text="Surrogate is another name for duplicate"">
+No.
+ </opt>
+ <opt text="Estimators of timeseries properties">
+ No.
+  </opt>
+<opt text="Helper timeseries that emulate aspects of the original", correct="true">
+Yes indeed
+</opt>
+</choice>
+
+Why are surrogates needed in the first place?
+<choice id="03-10">
+<opt text="They are not needed; their use is entirely optional"">
+If only!
+ </opt>
+<opt text="They are needed when assumptions of standard statistical tests are violated", correct="true">
+Yes, and that is nearly every time in the geosciences.
+</opt>
+</choice>
+
+In Pyleoclim, how does one invoke phase-randomized surrogates, e.g. for a correlation test?
+<choice id="03-11">
+<opt text="using `method = 'phaseran'` in the `correlation()` function call", correct="true">
+Yes, it's that simple.
+ </opt>
+<opt text="using `method = 'ebisuzaki'` in the `correlation()` function call">
+No, sorry.
+</opt>
+<opt text="They are not available in Pyleoclim">
+You really think we would do that to you?
+ </opt>
+</choice>
+
+In Pyleoclim, what is the surrogate NOT to invoke to test the significance of spectral peaks?
+<choice id="03-12">
+<opt text="phaseran", correct="true">
+Yes, because it simply duplicates the spectrum of the target.
+ </opt>
+<opt text="AR(1) surrogates (`ar1sim`)">
+That one is good
+</opt>
+<opt text="Colored Noise (`CN`)">
+That one is good
+ </opt>
+</choice>
+
+
+</exercise>
+
+<exercise id="5" title="Spectral Analysis">
+
+The training materials can be accessed [here](https://figshare.com/ndownloader/files/46768570). Please read the presentation, as well as other helpful materials (e.g. [Part 2 of this book](https://figshare.com/articles/book/Data_Analysis_in_the_Earth_Environmental_Sciences/1014336)), and relevant tutorials in [R]() and [Python](http://linked.earth/PyRATES_practicums_py/notebooks/Spectral_Analysis_Rio_Grande.html), then answer the following questions:
+
+**Questions**
+In Pyleoclim, how can one perform spectral analysis on unevenly-spaced timeseries?
+
+<choice id="03-13">
+<opt text="You cannot do that in `Pyleoclim`">
+Oh yes you CAN!
+</opt>
+<opt text="Regrid to a uniform time grid", correct="true">
+Correct.
+</opt>
+<opt text="Use a method designed to handle uneven gaps, like the Lomb-Scargle periodogram or the Weigted Wavelet Z-transform", correct="true">
+Correct.
+</opt>
+
+
+<opt text="Colored Noise (`CN`)">
+That one is good
+ </opt>
+</choice>
+
+
+</exercise>
+
+<exercise id="6" title="Wavelet Analysis">
+
+The training materials can be accessed [here](https://figshare.com/ndownloader/files/46768570). Please read the presentation, and relevant tutorials in [R]() and [Python](http://linked.earth/PyRATES_practicums_py/notebooks/wavelets%26coherence.html), then answer the following questions:
 
 **Questions**
 
 </exercise>
-
-
-<exercise id="4" title="Spectral Analysis">
-
-</exercise>
-
-<exercise id="5" title="Wavelet Analysis">
-
-</exercise>
-
