@@ -221,10 +221,10 @@ How would you find out what spectral methods are available in `Pyleoclim` (sever
 <opt text="Use the documentation of `Series.spectral()`: https://pyleoclim-util.readthedocs.io/en/latest/core/api.html#pyleoclim.core.series.Series.spectral", correct="true">
 Remember what they said about reading the manuals?
 </opt>
-<opt text="Look at the [dedicated PyleoTutorial](http://linked.earth/PyleoTutorials/notebooks/L2_spectral_analysis.html)", correct="true">
+<opt text="Look at the dedicated PyleoTutorial (http://linked.earth/PyleoTutorials/notebooks/L2_spectral_analysis.html)", correct="true">
 Correct.
 </opt>
-<opt text="Ask [ChatGPT](https://medium.com/cyberpaleo/pyleoclim-and-chatgpt-f8f1de167044)", correct="true">
+<opt text="Ask ChatGPT (see https://medium.com/cyberpaleo/pyleoclim-and-chatgpt-f8f1de167044)", correct="true">
 </opt>
 </choice>
 
@@ -236,7 +236,7 @@ Oh yes you CAN!
 </opt>
 <opt text="Regrid to a uniform time grid", correct="true">
 </opt>
-<opt text="Use a method designed to handle uneven gaps, like the Lomb-Scargle periodogram or the Weigted Wavelet Z-transform", correct="true">
+<opt text="Use a method designed to handle uneven gaps, like the Lomb-Scargle periodogram or the Weighted Wavelet Z-transform", correct="true">
 Correct.
 </opt>
 <opt text="Colored Noise (`CN`)">
@@ -278,11 +278,11 @@ Why is it sometimes desirable to remove a seasonal cycle from a geoscience serie
 <opt text="The cycle might obscure more subtle signals in the series", correct="true">
 Well done.  
 </opt>
-<opt text="spectral analysis is about eliminating harmonics">
-It definitely isn't about that.
+<opt text="Spectral analysis is about eliminating harmonics">
+It definitely isn't about that at all.
 </opt>
-<opt text="Fit a line to the spectrum using Ordinary Least Squares">
-You could, but this has already been done for you `PSD.beta_est()`.
+<opt text="Cycles create aliasing and leakage, and need to be removed">
+I see you like impressive words! Unfortunately, they are used in the wrong way here.
 </opt>
 </choice>
 </exercise>
@@ -293,5 +293,94 @@ You could, but this has already been done for you `PSD.beta_est()`.
 The training materials can be accessed [here](https://figshare.com/ndownloader/files/46768570). Please read the presentation, and relevant [tutorials](http://linked.earth/PyRATES_practicums_py/notebooks/wavelets%26coherence.html), then answer the following questions:
 
 **Questions**
+
+Why do wavelet analysis when you can just do spectral analysis?
+
+<choice id="03-18">
+<opt text="Wavelet plots look a lot more colorful">
+True, but not a good enough reason
+</opt>
+<opt text="Wavelets are oscillatory">
+So are sines and cosines! Think about what sets them apart.
+</opt>
+<opt text="Wavelets have good localization, so can handle non-stationary data, unlike spectral analysis, which assumes stationarity.", correct="true">
+Now we're talking.  
+</opt>
+</choice>
+
+On a scalogram like [this one](http://linked.earth/PyRATES_practicums_py/_images/2562b92cfe80024a5dde0ee17b21d85ec6167b32bb844268cfa611b82134f6c0.png), what is the name of the region shaded in white?
+
+<choice id="03-19">
+<opt text="Cone of influence", correct="true">
+</opt>
+<opt text="Shadow zone">
+More poetic, but much less true.
+</opt>
+<opt text="Significance region">
+No!
+</opt>
+</choice>
+
+What is the meaning of this region?
+
+<choice id="03-20">
+<opt text="Wavelet amplitude in this region is significant">
+This notion is distinct from statistical significance. It's wavelet-specific.
+</opt>
+<opt text="Wavelet amplitude in this region is anomalously high">
+</opt>
+<opt text="The region were edge effects are felt", correct="true">
+Anything in this region is unreliable.
+</opt>
+</choice>
+
+In `Pyleoclim` how can you compute the scalogram associated with a `Series` object called `ts`?
+
+<choice id="03-21">
+<opt text="ts.scalogram()">
+Close, but not quite
+</opt>
+<opt text="ts.wavelet()", correct="true">
+</opt>
+<opt text="ts.spectral()">
+That would generate a PSD, not a Scalogram, object.
+</opt>
+
+In `Pyleoclim` how can you assess the significance of the regions of a scalogram `scal`?
+
+<choice id="03-22">
+<opt text="significance(scal)">
+Close, but not quite
+</opt>
+<opt text="scal.signif_test()", correct="true">
+</opt>
+</choice>
+
+What does coherence measure?
+
+<choice id="03-23">
+<opt text="phase alignment in a band of frequencies/scales", correct="true">
+</opt>
+<opt text="common power in a band of frequencies/scales">
+</opt>
+<opt text="robustness">
+</opt>
+<opt text="replicability">
+</opt>
+</choice>
+
+What best describes the wavelet transform coherency (WTC)?
+
+<choice id="03-24">
+<opt text="Common power in wavelet space">
+That's XWT, which is the numerator of WTC, but not the whole thing.
+</opt>
+<opt text="A Pearson correlation coefficient in wavelet space", correct="true">
+Nice work.
+</opt>
+<opt text="The continuous wavelet transform of a correlation coefficient">
+A correlation coefficient is a single number; it does not have a transform.
+</opt>
+</choice>
 
 </exercise>
