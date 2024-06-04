@@ -1,7 +1,7 @@
 ---
 title: 'Module 3: Timeseries analysis'
 description:
-  "Here we introduce key concepts and practicums about timeseries analysis, and check that you have understood them. The slides can be accessed as PDF files [on FigShare](https://doi.org/10.6084/m9.figshare.25939801.v4) and the practicums are available as a [JupyterBook](http://linked.earth/PyRATES_practicums_py/intro.html). Note that you can download each associated notebook (see download icon at the top of each page) and repurpose as you see fit."
+  "Here we introduce key concepts and practicums about timeseries analysis, and check that you have understood them. The slides can be accessed as PDF files <a href="https://doi.org/10.6084/m9.figshare.25939801.v4">on FigShare</a> and the practicums are available as a <a href="http://linked.earth/PyRATES_practicums_py/intro.html">JupyterBook</a>. Note that you can download each associated notebook (see download icon at the top of each page) and repurpose as you see fit."
 prev: /module2
 next: /module4
 type: chapter
