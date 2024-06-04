@@ -1,7 +1,7 @@
 ---
 title: 'Module 3: Timeseries analysis'
 description:
-  "Here we introduce key concepts and practicums about timeseries analysis, and check that you have understood them. 
+  "Here we introduce key concepts and practicums about timeseries analysis, and check that you have understood them. "
 prev: /module2
 next: /module4
 type: chapter
