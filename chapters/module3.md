@@ -90,13 +90,13 @@ What is the best correlation statistic?
 <choice id="03-05">
 <opt text="Pearson's R">
 Good, not best
- </opt>
- <opt text="Spearman's rho">
- Good, not best
-  </opt>
-  <opt text="Kendall's tau">
-  Good, not best
-   </opt>
+</opt>
+<opt text="Spearman's rho">
+Good, not best
+</opt>
+<opt text="Kendall's tau">
+Good, not best
+</opt>
 <opt text="There is no best one. Each statistic has pros and cons", correct="true">
 You win!
 </opt>
@@ -107,7 +107,7 @@ What implicit assumption is made when testing for the significance of Pearson's 
 <choice id="03-06">
 <opt text="Data are causally related">
 Correlation says nothing about causation
- </opt>
+</opt>
 <opt text="Data are independent", correct="true">
 Yes, and ... ?
 </opt>
@@ -116,33 +116,35 @@ Correct
 </opt>
 <opt text="Data are linearly related">
 it is true that a linear relationship is measured by R, but that does not affect the significance estimate.
- </opt>
+</opt>
 </choice>
 
 Under those assumptions, the null distribution for Pearson's R is:
+
 <choice id="03-07">
 <opt text="a Gaussian distribution">
 Not quite
- </opt>
- <opt text="A Gamma distribution">
- Nope
-  </opt>
+</opt>
+<opt text="A Gamma distribution">
+Nope
+</opt>
 <opt text="Student's t distribution", correct="true">
 Yes indeed
 </opt>
 </choice>
 
 When the data are not independent, e.g. because of serial correlation, how may this test be corrected?
+
 <choice id="03-08">
 <opt text="Reduce the degrees of freedom as n_eff = n (1-g)/(1+g), where g is the lag-1 autocorrelation", correct="true">
 Yes, though when g is close to 1, even that is not enough.
 </opt>
 <opt text="Switch the null distribution to a Monte Carlo Markov Chain">
 That sounds impressive, but it is complete gibberish
- </opt>
- <opt text="Switch the test statistic to Kendall's tau">
- No. The null distribution for Kendall's tau also assumes independence, so that won't help.
-  </opt>
+</opt>
+<opt text="Switch the test statistic to Kendall's tau">
+No. The null distribution for Kendall's tau also assumes independence, so that won't help.
+</opt>
 </choice>
 
 </exercise>
