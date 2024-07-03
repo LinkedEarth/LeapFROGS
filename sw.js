@@ -50,14 +50,14 @@ self.__precacheManifest = [
     "url": "e6d6ed13-f66b80e7d04ca230012c.js"
   },
   {
-    "url": "app-652668f2b3ff7bdb94e3.js"
+    "url": "app-721c736525f5f7d5d0d4.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-44ceac2081f421b30e8f.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d3a0c18fa57a595949507801c3f53153"
+    "revision": "6515bc63f0e91d01fadd6968e71b8a64"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -65,7 +65,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "2ead35cfac241dad144ef6aa770f5228"
+    "revision": "acdf2e44a7ba969d62b330a529c1956a"
   },
   {
     "url": "polyfill-10416fb74ea7b340e982.js"
@@ -96,7 +96,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/LeapFROGS/app-652668f2b3ff7bdb94e3.js`))) {
+  if (!resources || !(await caches.match(`/LeapFROGS/app-721c736525f5f7d5d0d4.js`))) {
     return await fetch(event.request)
   }
 
