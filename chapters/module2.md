@@ -24,7 +24,20 @@ This module is divided as follows:
 
 </exercise>
 
-<exercise id="2" title="Getting Started with Jupyter">
+<exercise id="2" title="Python IDE">
+
+An Integrated Development Environment (IDE) refers to a software application that offers data scientists (and computer programmers) with extensive software development abiliies. IDEs most often consist of a source code editor, automation tools, and a debugger. For data science applications (including geoscience), it is also useful to have an IDE that can show you the variables (especially matrices, vectors, and tables).
+
+Below is a list of Python IDEs for the modern geoscientist in alphabetical order:
+* [Jupyter Lab and Jupyter Notebook](https://jupyter.org/) is very beginner friendly with a simple document-centric interface that combines code, visualizations and written documentation about your work. It is so widely used for data science projects and for sharing scientific results that we devote the next section to its use. 
+  * [Google Colaboratory](https://colab.research.google.com/) leverages this software to create a cloud-based computing environment with access to several GPUs in its paid version. Colab is integrated into the Google suite of products, so all you need to get started is a Google account and internet access. You can also share Colab notebooks with others similar to a Google Doc, making it easy to share your work and collaborate on the same notebook. Be aware that it is sometimes difficult to install new Python packages within your instance of Colab.   
+* [PyCharm](https://www.simplilearn.com/tutorials/python-tutorial/pycharm) provides code analysis, a graphical debugger, an integrated unit tester, and integration with version control systems. 
+* [Spyder](https://www.spyder-ide.org/) features advanced editing with  autocomplete functionality, syntax highlighting, horizontal and vertical splitting (among others), debugging and profiling tools. Spyder also has a variable explorer tool that allows you to see the variables you have created and a plot explorer for visualizations. 
+* [Visual Studio](https://visualstudio.microsoft.com/) has many advanced features for coding, debugging and collaboration. Many plug-ins are available for this software to increased productivity, including [GitHub Copilot](https://github.com/features/copilot), an AI coding assistant. 
+
+</exercise>
+
+<exercise id="3" title="Getting Started with Jupyter">
 
 Read the following [article](https://foundations.projectpythia.org/foundations/getting-started-jupyter.html) to know more about what Jupyter is.
 
@@ -34,7 +47,7 @@ We recommend that you install either [Jupyter Notebook](https://jupyter.org/inst
 
 </exercise>
 
-<exercise id="3" title="Introduction to Numpy">
+<exercise id="4" title="Introduction to Numpy">
 
 NumPy is the fundamental package for scientific computing in Python.
 It is a Python library that provides a multidimensional array object,
@@ -102,7 +115,7 @@ So the scale will be `np.sqrt(np.var(value)/2)`
 
 </exercise>
 
-<exercise id="4" title="Intermediate NumPy">
+<exercise id="5" title="Intermediate NumPy">
 
 Now that you have the basics if NumPy, let's move on to more advanced functionalities. Review the article below from Project Pythia and use the associated Binder for training exercises.
 
@@ -145,7 +158,7 @@ Another task we love to perform is wrangling age models. You can think of each a
 
 </exercise>
 
-<exercise id='5' title="Introduction to Pandas">
+<exercise id='6' title="Introduction to Pandas">
 
 Pandas is a very powerful library for working with tabular data (i.e. anything you might put in a spreadsheet – a common data type in the geosciences). It allows us to use labels for our data so that we can write expressive and robust code to manipulate the data.
 
@@ -192,7 +205,7 @@ Pandas has a [querying functionality](https://pandas.pydata.org/docs/reference/a
 
 </exercise>
 
-<exercise id="6" title="A first look at Matplotlib">
+<exercise id="7" title="A first look at Matplotlib">
 
 Matplotlib is the go-to library for plotting within Python, with many functionalities and names reminiscent of Matlab's plotting libraries. Matplotlib comes with very good default parameters, so you can get visualizing within a few minutes of installing it. It is also extensively customizable, and can be used to make publication-quality graphics.
 
@@ -371,7 +384,7 @@ https://pbpython.com/effective-matplotlib.html
 
 </exercise>
 
-<exercise id="7" title="Introduction to Cartopy">
+<exercise id="8" title="Introduction to Cartopy">
 
 Cartopy is a Python package designed for geospatial data processing in order
 to produce maps and other geospatial data analyses.
@@ -552,7 +565,7 @@ See the previous codeblock and re-use at will! Only a few minor tweaks are neede
 
 </exercise>
 
-<exercise id="8" title="Other useful resources">
+<exercise id="9" title="Other useful resources">
 
 ## Libraries
 
