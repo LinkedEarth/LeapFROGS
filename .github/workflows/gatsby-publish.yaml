@@ -17,6 +17,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup the git user as the Actions user
         uses: fregante/setup-git-user@v2
+      - name: install homebrew.
+        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      - name: but brew command in Path
+        run: echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.zshrc
       - name: Install the most recent Node.js version.
         run: brew install node@10
       - name: link node.
