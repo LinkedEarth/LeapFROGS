@@ -15,9 +15,9 @@ jobs:
       - name: Setup the git user as the Actions user
         uses: fregante/setup-git-user@v2
       - name: Install the most recent Node.js version.
-        uses: actions/setup-node@v4
-        with:
-          node-version: '14.x'
+        run: brew install node@10
+      - name: link node.
+        run: brew link node@10
       - name: Do a clean install of the required packages.
         run: npm install
       - name: Install Gatsby CLI
