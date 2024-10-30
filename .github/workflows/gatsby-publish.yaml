@@ -21,8 +21,6 @@ jobs:
         run: curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
       - name: nvm setup
         run: export NVM_DIR="$HOME/.nvm"
-      - name: more nvm setup
-        run: [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
       - name: install node14
         run: nvm install 14
       - name: show node version
