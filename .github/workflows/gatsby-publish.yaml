@@ -21,6 +21,12 @@ jobs:
         run: brew install node@16
       - name: link node.
         run: brew link node@16
+      - name: get gcc
+        run: brew install --build-from-source gcc
+      - name: get xcode-select
+        run: xcode-select install
+      - name: get vips
+        run: brew install vips
       - name: start with node-gyp.
         run: npm install -g node-gyp
       - name: Do a clean install of the required packages.
