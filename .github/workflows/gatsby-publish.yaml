@@ -17,8 +17,12 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup the git user as the Actions user
         uses: fregante/setup-git-user@v2
-      - name: Install the most recent Node.js version.
-        run: sudo apt-get install nodejs@14
+      - name: Download Node 14
+        run: curl -sL https://deb.nodesource.com/setup_14.x -o setup_14.sh
+      - name: nodesource setup
+        run: sudo sh ./setup_14.sh
+      - name: install node14
+        run: sudo apt install nodejs
       - name: install sass
         run: npm install -g sass
       - name: Do a clean install of the required packages.
