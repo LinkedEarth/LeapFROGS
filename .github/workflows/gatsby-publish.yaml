@@ -19,6 +19,8 @@ jobs:
         uses: fregante/setup-git-user@v2
       - name: Install the most recent Node.js version.
         run: sudo apt-get install nodejs
+      - name: install sass
+        run: npm install -g sass
       - name: Do a clean install of the required packages.
         run: npm install
       - name: Install Gatsby CLI
