@@ -20,10 +20,11 @@ jobs:
       - name: Download nvm
         run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
       - name: Install nvm
-        - bash: |
-         . $HOME/.nvm/nvm.sh > /dev/null 2>&1 || true
-         nvm ls
-         nvm use v14
+      - run: |
+         export NVM_DIR="$HOME/.nvm"
+         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+         nvm use 14
+         npm ci
       - name: install node14
         run: nvm install 14
       - name: show node version
