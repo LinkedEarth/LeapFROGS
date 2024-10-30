@@ -23,8 +23,8 @@ jobs:
         run: sudo sh ./setup_14.sh
       - name: install node14
         run: sudo apt install nodejs
-      - name: install sass
-        run: npm install -g sass
+      - name: show node version
+        run: node -v
       - name: Do a clean install of the required packages.
         run: npm install
       - name: Install Gatsby CLI
