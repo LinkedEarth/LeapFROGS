@@ -20,7 +20,7 @@ jobs:
       - name: Download nvm
         run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
       - name: Install nvm
-      - run: |
+        run: |
          export NVM_DIR="$HOME/.nvm"
          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
          nvm use 14
