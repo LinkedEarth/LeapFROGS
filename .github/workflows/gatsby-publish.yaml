@@ -17,14 +17,16 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup the git user as the Actions user
         uses: fregante/setup-git-user@v2
-      - name: Download Node 14
-        run: curl -sL https://deb.nodesource.com/setup_14.x -o setup_14.sh
-      - name: nodesource setup
-        run: sudo sh ./setup_14.sh
+      - name: Download nvm
+        run: curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+      - name: nvm setup
+        run: export NVM_DIR="$HOME/.nvm"
+      - name: more nvm setup
+        run: [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
       - name: install node14
-        run: sudo apt install nodejs
+        run: nvm install 14
       - name: show node version
-        run: node -v
+        run: nvm use 14
       - name: Do a clean install of the required packages.
         run: npm install
       - name: Install Gatsby CLI
