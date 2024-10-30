@@ -24,7 +24,7 @@ jobs:
       - name: get gcc
         run: brew install --build-from-source gcc
       - name: get xcode-select
-        run: xcode-select install
+        run: xcode-select --install
       - name: get vips
         run: brew install vips
       - name: start with node-gyp.
