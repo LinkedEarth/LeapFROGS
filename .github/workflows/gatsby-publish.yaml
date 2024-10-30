@@ -11,26 +11,18 @@ env:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout the current code
         uses: actions/checkout@v3
       - name: Setup the git user as the Actions user
         uses: fregante/setup-git-user@v2
       - name: Install the most recent Node.js version.
-        run: brew install node@16
-      - name: link node.
-        run: brew link node@16
-      - name: get gcc
-        run: brew install --build-from-source gcc
-      - name: get vips
-        run: brew install vips
-      - name: start with node-gyp.
-        run: npm install -g node-gyp
+        run: apt install nodejs
       - name: Do a clean install of the required packages.
         run: npm install
       - name: Install Gatsby CLI
-        run: npm install -g gatsby-cli@2.12.34
+        run: npm install -g gatsby-cli
       - name: Install the gh-pages CLI
         run: npm install gh-pages -g
       - name: Build
