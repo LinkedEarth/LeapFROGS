@@ -20,7 +20,9 @@ jobs:
       - name: Download nvm
         run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
       - name: nvm setup
-        run: source ~/.bashrc
+        run: |
+          nvm install --latest-npm --no-progress
+          echo "$(dirname $(nvm which node))" >> $GITHUB_PATH
       - name: install node14
         run: nvm install 14
       - name: show node version
