@@ -18,24 +18,30 @@ jobs:
       - name: Setup the git user as the Actions user
         uses: fregante/setup-git-user@v2
 
-      # Set up Node 10 directly
-      - name: Setup Node.js 14
+      # Set up Node 16
+      - name: Setup Node.js 16
         uses: actions/setup-node@v3
         with:
-          node-version: 14.21.3 #specific version of Node 14
+          node-version: 16.20.2  # Using LTS version of Node 16
 
-      # Install specific older version of Gatsby CLI compatible with Node 10
+      # Install Gatsby CLI and gh-pages
       - name: Install Gatsby CLI and gh-pages
         run: |
           npm install -g gatsby-cli@4.25.0
           npm install -g gh-pages
-          npm install -g sass    # Install sass globally
+          npm install -g sass
+
+      # Remove package-lock.json and node_modules for clean install
+      - name: Clean install preparation
+        run: |
+          rm -f package-lock.json
+          rm -rf node_modules
 
       # Install dependencies
       - name: Do a clean install of the required packages
-        run: | 
-          npm install --no-audit
-          npm install sass      # Install sass locally in the project
+        run: |
+          npm install --legacy-peer-deps --no-audit
+          npm install sass
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
 
