@@ -29,10 +29,13 @@ jobs:
         run: |
           npm install -g gatsby-cli@2.12.111
           npm install -g gh-pages
+          npm install -g sass    # Install sass globally
 
       # Install dependencies
       - name: Do a clean install of the required packages
-        run: npm install --no-audit
+        run: | 
+          npm install --no-audit
+          npm install sass      # Install sass locally in the project
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
 
