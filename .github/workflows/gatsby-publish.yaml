@@ -27,7 +27,7 @@ jobs:
       # Install specific older version of Gatsby CLI compatible with Node 10
       - name: Install Gatsby CLI and gh-pages
         run: |
-          npm install -g gatsby-cli@2.12.111
+          npm install -g gatsby-cli@4.25.0
           npm install -g gh-pages
           npm install -g sass    # Install sass globally
 
