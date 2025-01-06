@@ -1,9 +1,8 @@
 name: Gatsby Publish
-
 on:
   push:
     branches:
-      main
+      - main
   workflow_dispatch:
 
 env:
@@ -19,25 +18,19 @@ jobs:
       - name: Setup the git user as the Actions user
         uses: fregante/setup-git-user@v2
 
-       #Set up Node 18 for Gatsby CLI
-      - name: Setup Node.js 18 for Gatsby
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-# Install Gatsby CLI and gh-pages globally with Node 18
-      - name: Install Gatsby CLI and gh-pages
-        run: |
-          npm install -g gatsby-cli
-          npm install -g gh-pages
-
-      # Switch to Node 10 for the app
-      - name: Setup Node.js 10 for App
+      # Set up Node 10 directly
+      - name: Setup Node.js 10
         uses: actions/setup-node@v3
         with:
           node-version: 10.24.1
 
-      # Install dependencies with Node 10
+      # Install specific older version of Gatsby CLI compatible with Node 10
+      - name: Install Gatsby CLI and gh-pages
+        run: |
+          npm install -g gatsby-cli@2.12.111
+          npm install -g gh-pages
+
+      # Install dependencies
       - name: Do a clean install of the required packages
         run: npm install --no-audit
         env:
