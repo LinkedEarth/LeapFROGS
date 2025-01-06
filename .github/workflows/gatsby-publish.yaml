@@ -15,24 +15,38 @@ jobs:
     steps:
       - name: Checkout the current code
         uses: actions/checkout@v3
+
       - name: Setup the git user as the Actions user
         uses: fregante/setup-git-user@v2
-      - name: Download nvm
-        run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-      - name: Install nvm
+
+       #Set up Node 18 for Gatsby CLI
+      - name: Setup Node.js 18 for Gatsby
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+# Install Gatsby CLI and gh-pages globally with Node 18
+      - name: Install Gatsby CLI and gh-pages
         run: |
-         export NVM_DIR="$HOME/.nvm"
-         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-         nvm install 14
-         nvm use 14
-      - name: Do a clean install of the required packages.
-        run: npm install
-      - name: Install Gatsby CLI
-        run: npm install -g gatsby-cli
-      - name: Install the gh-pages CLI
-        run: npm install gh-pages -g
-      - name: Build
+          npm install -g gatsby-cli
+          npm install -g gh-pages
+
+      # Switch to Node 10 for the app
+      - name: Setup Node.js 10 for App
+        uses: actions/setup-node@v3
+        with:
+          node-version: 10.24.1
+
+      # Install dependencies with Node 10
+      - name: Do a clean install of the required packages
+        run: npm install --no-audit
+        env:
+          NODE_OPTIONS: "--max-old-space-size=4096"
+
+      # Build and deploy
+      - name: Build and Deploy
         env:
           TOKEN: ${{ secrets.token_secret_deploy }}
+          NODE_OPTIONS: "--max-old-space-size=4096"
         run: |
           gatsby build --prefix-paths && gh-pages -d public -r https://git:$TOKEN@github.com/LinkedEarth/LeapFROGS.git
