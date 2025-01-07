@@ -30,9 +30,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y build-essential
 
-      # Install dependencies
+      # Install dependencies with specific sass version
       - name: Install packages
-        run: npm install --legacy-peer-deps --no-audit
+        run: |
+          npm install --legacy-peer-deps --no-audit
+          npm install sass@1.32.13 --legacy-peer-deps --no-audit
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
 
