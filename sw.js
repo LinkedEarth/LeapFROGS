@@ -26,7 +26,7 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-b00547b6d2909e63891a.js"
+    "url": "webpack-runtime-a8b5915020479ed8b01d.js"
   },
   {
     "url": "styles.d8ceeda15cd69ede02d8.css"
@@ -50,14 +50,14 @@ self.__precacheManifest = [
     "url": "e6d6ed13-bab39835ca1e382a1a59.js"
   },
   {
-    "url": "app-b2f9304c76f3b59680ca.js"
+    "url": "app-a1c4df6652f95519aaf2.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-15096bed533ed0ff8b58.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "a533ef09632738826ab4b2e2543f0d0a"
+    "revision": "eb4443aada88d4deb026f59bc4218fe0"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -65,14 +65,14 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "499273c215a41bf1d52a03aaed895c7d"
+    "revision": "2f3046eb6637fea02f2bfaf958464510"
   },
   {
     "url": "polyfill-404a8fe84b9b126210e7.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "c5338d7702d412ef2ef86a1659fa7bf9"
+    "revision": "309af307f7f2d33a07b45c899a3c031a"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -91,12 +91,12 @@ const { NavigationRoute } = workbox.routing
 
 const navigationRoute = new NavigationRoute(async ({ event }) => {
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/ec_workshops_py`), ``)
+  pathname = pathname.replace(new RegExp(`^/LeapFROGS`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/ec_workshops_py/app-b2f9304c76f3b59680ca.js`))) {
+  if (!resources || !(await caches.match(`/LeapFROGS/app-a1c4df6652f95519aaf2.js`))) {
     return await fetch(event.request)
   }
 
@@ -109,7 +109,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/ec_workshops_py/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/LeapFROGS/offline-plugin-app-shell-fallback/index.html`
   return await caches.match(offlineShell)
 })
 
