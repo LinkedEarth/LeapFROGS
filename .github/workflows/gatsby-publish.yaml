@@ -18,11 +18,18 @@ jobs:
       - name: Setup the git user as the Actions user
         uses: fregante/setup-git-user@v2
 
-      # Set up Node 16
-      - name: Setup Node.js 16
+      # Setup Python 2 for node-sass
+      - name: Setup Python 2
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python2
+          sudo ln -s /usr/bin/python2 /usr/bin/python
+
+      # Set up Node 14
+      - name: Setup Node.js 14
         uses: actions/setup-node@v3
         with:
-          node-version: 16.20.2  # Using LTS version of Node 16
+          node-version: 14.21.3
 
       # Install Gatsby CLI and gh-pages
       - name: Install Gatsby CLI and gh-pages
