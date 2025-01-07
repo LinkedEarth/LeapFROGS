@@ -3,12 +3,11 @@ const autoprefixer = require('autoprefixer')
 
 module.exports = {
     siteMetadata: meta,
-    pathPrefix: "/LeapFROGS",
+    pathPrefix: "/ec_workshops_py",
     plugins: [
         {
             resolve: `gatsby-plugin-sass`,
             options: {
-                implementation: require('sass'),
                 indentedSyntax: true,
                 postCssPlugins: [autoprefixer()],
                 cssLoaderOptions: {
