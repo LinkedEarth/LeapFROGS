@@ -8,23 +8,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the current code
-        uses: actions/checkout@v2.3.1  # Using exact version that worked
+        uses: actions/checkout@v2.3.1
 
       - name: Setup the git user as the Actions user
-        uses: fregante/setup-git-user@v1  # Using exact version that worked
+        uses: fregante/setup-git-user@v1
 
       - name: Install Node.js
-        uses: actions/setup-node@v1  # Using exact version that worked
+        uses: actions/setup-node@v1
         with:
           node-version: '14.x'
 
-      # Clean install with exact package versions
-      - name: Do a clean install of the required packages
+      # Install dependencies
+      - name: Install packages and sass
         run: |
           rm -rf node_modules package-lock.json
           npm install --no-audit
+          npm install node-sass@4.12.0 --no-audit  # Install exact version from your package.json
+          npm install sass@1.32.13 --no-audit      # Install compatible sass version
 
-      # Install exact Gatsby CLI version that worked
+      # Install exact Gatsby CLI version
       - name: Install Gatsby CLI
         run: npm install -g gatsby-cli@2.12.34
 
