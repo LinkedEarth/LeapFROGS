@@ -23,7 +23,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14.21.3
-          cache: 'npm'
 
       # Install build tools needed for node-sass
       - name: Install build essentials
