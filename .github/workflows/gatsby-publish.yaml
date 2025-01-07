@@ -30,9 +30,15 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y build-essential
 
-      # Install dependencies with specific sass version
+      # Install dependencies with specific versions
       - name: Install packages
         run: |
+          # First remove node_modules and package-lock if they exist
+          rm -rf node_modules package-lock.json
+          # Force install older versions of problematic packages
+          npm install gatsby-plugin-offline@3.10.2 --save --legacy-peer-deps
+          npm install undici@4.16.0 --save --legacy-peer-deps
+          # Install remaining packages
           npm install --legacy-peer-deps --no-audit
           npm install sass@1.32.13 --legacy-peer-deps --no-audit
         env:
