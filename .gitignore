@@ -45,4 +45,4 @@ vignettes/*.pdf
 # Jupyter checkpoints
 *.ipynb_checkpoints/
 node_modules/
-package-lock.json
+
