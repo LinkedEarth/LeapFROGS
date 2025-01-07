@@ -16,15 +16,15 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: '14.16.0'  # Using a specific version that has compatible binaries with node-sass 4.12.0
 
-      # Install dependencies
-      - name: Install packages and sass
-        run: |
-          rm -rf node_modules package-lock.json
-          npm install --no-audit
-          npm install node-sass@4.12.0 --no-audit  # Install exact version from your package.json
-          npm install sass@1.32.13 --no-audit      # Install compatible sass version
+      # First install node-sass globally to ensure it's built correctly
+      - name: Install node-sass globally
+        run: npm install -g node-sass@4.12.0
+
+      # Then do the regular install
+      - name: Install packages
+        run: npm install --no-audit
 
       # Install exact Gatsby CLI version
       - name: Install Gatsby CLI
