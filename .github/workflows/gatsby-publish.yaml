@@ -3,59 +3,36 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
-
-env:
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the current code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2.3.1  # Using exact version that worked
 
       - name: Setup the git user as the Actions user
-        uses: fregante/setup-git-user@v2
+        uses: fregante/setup-git-user@v1  # Using exact version that worked
 
-      # Set up Node 14
-      - name: Setup Node.js 14
-        uses: actions/setup-node@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v1  # Using exact version that worked
         with:
-          node-version: 14.21.3
+          node-version: '14.x'
 
-      # Install build tools needed for node-sass
-      - name: Install build essentials
+      # Clean install with exact package versions
+      - name: Do a clean install of the required packages
         run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential
-
-      # Install dependencies with specific versions
-      - name: Install packages
-        run: |
-          # First remove node_modules and package-lock if they exist
           rm -rf node_modules package-lock.json
-          # Force install older versions of problematic packages
-          npm install gatsby-plugin-offline@3.10.2 --save --legacy-peer-deps
-          npm install undici@4.16.0 --save --legacy-peer-deps
-          # Install remaining packages
-          npm install --legacy-peer-deps --no-audit
-          npm install sass@1.32.13 --legacy-peer-deps --no-audit
-        env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
+          npm install --no-audit
 
-      # Install Gatsby CLI globally with version matching your Gatsby version
+      # Install exact Gatsby CLI version that worked
       - name: Install Gatsby CLI
-        run: npm install -g gatsby-cli@2.12.111
+        run: npm install -g gatsby-cli@2.12.34
 
-      # Install gh-pages
       - name: Install gh-pages
-        run: npm install -g gh-pages
+        run: npm install gh-pages -g
 
-      # Build and deploy
       - name: Build and Deploy
         env:
           TOKEN: ${{ secrets.token_secret_deploy }}
-          NODE_OPTIONS: "--max-old-space-size=4096"
         run: |
           gatsby build --prefix-paths && gh-pages -d public -r https://git:$TOKEN@github.com/LinkedEarth/LeapFROGS.git
