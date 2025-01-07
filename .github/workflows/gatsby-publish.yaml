@@ -18,25 +18,11 @@ jobs:
       - name: Setup the git user as the Actions user
         uses: fregante/setup-git-user@v2
 
-      # Setup Python 2 for node-sass
-      - name: Setup Python 2
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y python2
-          sudo ln -s /usr/bin/python2 /usr/bin/python
-
       # Set up Node 14
       - name: Setup Node.js 14
         uses: actions/setup-node@v3
         with:
           node-version: 14.21.3
-
-      # Install Gatsby CLI and gh-pages
-      - name: Install Gatsby CLI and gh-pages
-        run: |
-          npm install -g gatsby-cli@4.25.0
-          npm install -g gh-pages
-          npm install -g sass
 
       # Remove package-lock.json and node_modules for clean install
       - name: Clean install preparation
@@ -44,13 +30,20 @@ jobs:
           rm -f package-lock.json
           rm -rf node_modules
 
-      # Install dependencies
-      - name: Do a clean install of the required packages
+      # Install dependencies with sass instead of node-sass
+      - name: Install packages
         run: |
+          # First remove node-sass if it exists in package.json
+          sed -i 's/"node-sass".*,//g' package.json
+          # Install dependencies including sass instead of node-sass
           npm install --legacy-peer-deps --no-audit
-          npm install sass
-        env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
+          npm install sass gatsby-plugin-sass --legacy-peer-deps
+
+      # Install Gatsby CLI and gh-pages
+      - name: Install Gatsby CLI and gh-pages
+        run: |
+          npm install -g gatsby-cli@4.25.0
+          npm install -g gh-pages
 
       # Build and deploy
       - name: Build and Deploy
