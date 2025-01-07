@@ -23,27 +23,27 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14.21.3
+          cache: 'npm'
 
-      # Remove package-lock.json and node_modules for clean install
-      - name: Clean install preparation
+      # Install build tools needed for node-sass
+      - name: Install build essentials
         run: |
-          rm -f package-lock.json
-          rm -rf node_modules
+          sudo apt-get update
+          sudo apt-get install -y build-essential
 
-      # Install dependencies with sass instead of node-sass
+      # Install dependencies
       - name: Install packages
-        run: |
-          # First remove node-sass if it exists in package.json
-          sed -i 's/"node-sass".*,//g' package.json
-          # Install dependencies including sass instead of node-sass
-          npm install --legacy-peer-deps --no-audit
-          npm install sass gatsby-plugin-sass --legacy-peer-deps
+        run: npm install --legacy-peer-deps --no-audit
+        env:
+          NODE_OPTIONS: "--max-old-space-size=4096"
 
-      # Install Gatsby CLI and gh-pages
-      - name: Install Gatsby CLI and gh-pages
-        run: |
-          npm install -g gatsby-cli@4.25.0
-          npm install -g gh-pages
+      # Install Gatsby CLI globally with version matching your Gatsby version
+      - name: Install Gatsby CLI
+        run: npm install -g gatsby-cli@2.12.111
+
+      # Install gh-pages
+      - name: Install gh-pages
+        run: npm install -g gh-pages
 
       # Build and deploy
       - name: Build and Deploy
