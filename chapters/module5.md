@@ -48,5 +48,4 @@ In addition to the issue tracking and collaboration tools mentioned above, GitHu
 
 [Milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) can be set to track progress on groups of issues in a repository. You can set deadlines for your milestones, which can help you keep on track for deliverables. 
 
-
 </exercise>
