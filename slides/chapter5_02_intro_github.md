@@ -10,7 +10,7 @@ type: slides
 
 This lesson will introduce the functions of GitHub, the de facto standard platform for collaboration and version control used by the open-source coding community.
 
-In the last exercise, you will configure your GitHub account for secure logins via ssh and/or https.
+First, let's create an account.
 
 ---
 
@@ -33,10 +33,6 @@ The linked tutorial will guide you through some of the more advanced components 
 
 A repository (repo) is a web-hosted file directory. A repo can be public or private and can have multiple collaborators. Repos are typically used to house coding projects, but they can also be used to store other types of files.
 
-
-
-
-
 Some possible uses:
 
 * Share a scientific workflow
@@ -46,20 +42,54 @@ Some possible uses:
   * Assign tasks
   * Maintain production and development versions simulateously and merge when appropriate
 
+Additional resources: [Pythia - What is a GitHub Repository?](https://foundations.projectpythia.org/foundations/github/github-repos.html)
+
 ---
 ## Issues and Discussions
 
 ### Issues
 
-A GitHub Issue is a note in a repository that describes a bug, suggests a new feature, or offers general feedback. Issues can be submitted by repository owners/collaborators to track tasks or by outside users with questions/suggestions. 
+A GitHub Issue is a note in a repository that describes a bug, suggests a new feature, or offers general feedback. Issues can be submitted by repository owners/collaborators to track tasks or by outside users with questions/suggestions.
 
-#### Writing a good issue
+**Creating an Issue**
+
+1. Go to the Issues tab.
+2. Click New Issue.
+3. Fill in:
+  * Title: Short description of the task.
+  * Body: Detailed description, including context or instructions.
+  * Labels: Use labels like "bug," "enhancement," "help wanted."
+  * Assignees: Assign team members responsible for the issue. You can also assign yourself!
+4. Click Submit New Issue.
+
+---
+
+### Writing a good issue
 
 A bug report should consist of a reproducible example. Some repositories include [issue templates](https://github.com/stevemao/github-issue-templates?tab=readme-ov-file), which generally include space for <em>Expected Behavior</em>, <em>Actual Behavior</em>, <em>Steps to Reproduce the Problem</em>, and <em>Specifications (Version, Platform, Subsystem)</em>. Here's an example of a [well written issue](https://github.com/LinkedEarth/Pyleoclim_util/issues/469). Writing issues in this way makes reproducing problems (or misperceptions of problems) straightforward. This allows for smooth communication with the repository maintainers and greatly improves your chances of resolving your problems.
 
 [More on Issues from project Pythia](https://foundations.projectpythia.org/foundations/github/github-issues.html).
 
-### Discussions
+---
+
+### Using Labels for Organizations
+
+Labels help categorize tasks. Common examples:
+
+* Bug: For errors or problems.
+* Enhancement: For new features or improvements.
+* Documentation: For writing or updating guides.
+* High Priority: For urgent tasks.
+
+#### How to Add Labels
+
+1. Go to the Issues or Pull Requests tab.
+2. Click an issue or pull request.
+3. In the right sidebar, click Labels and select or create a label.
+
+---
+
+## Discussions
 
 GitHub Discussions provide a more open-ended forum for community engagement. A discussion topic is an open space for conversations such as steering project directions, eliciting community feedback, or offering notes on a new release.
 
@@ -77,9 +107,6 @@ Making a copy of a public repository can be useful in many circumstances. There 
 <div><h1><img src="https://docs.github.com/assets/cb-60499/images/help/repository/https-url-clone-cli.png" alt="GitHub Logo" width=25% align="left"/></h1></div>
 
 Cloning a repository creates your own copy, <strong>independent</strong> of the original repo. This method is ideal for creating your own project, using an existing repo as the starting point.
-
-
-
 
 
 A few use cases:

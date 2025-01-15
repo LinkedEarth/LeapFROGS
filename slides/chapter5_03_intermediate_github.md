@@ -50,7 +50,7 @@ A detailed description of version control with git (and how it relates to GitHub
 
 ---
 
-## Tips for Scientists Using Version Control
+### Tips for Scientists Using Version Control
 
 * Always write clear commit messages to explain changes.
 * Use branches for new experiments or major changes.
@@ -72,7 +72,7 @@ In both of these cases, it is useful to link the GitHub releases to Zenodo relea
 
 ---
 
-## Creating a new release on GitHub
+### Creating a new release on GitHub
 
 1. Navigate to your GitHub repository.
 2. Click Releases > Draft a new release.
@@ -100,7 +100,7 @@ An introduction on how git branches can be found on the [Project Pythia's websit
 
 ---
 
-## Creating a Branch on GitHub
+### Creating a Branch on GitHub
 
 <div><img src="https://github.com/LinkedEarth/LeapFROGS/blob/main/static/module5/branches.png?raw=true" alt="GitHub branches" width=25% align="left"/></div>
 
@@ -120,7 +120,7 @@ An introduction on how git branches can be found on the [Project Pythia's websit
 
 ---
 
-## Using the New Branch
+### Using the New Branch
 Any changes you make will now be saved to this branch, keeping the main branch unchanged.
 
 You can edit files directly on GitHub or upload new ones to this branch.
@@ -150,13 +150,15 @@ Zenodo is most known for data archival. When depositing data with Zenodo, a digi
 
 <div><img src="https://github.com/LinkedEarth/RLeapFROGS/blob/main/static/module5/zenodo_login.png?raw=true" alt="Zenodo Login" width=25% align="left"/></div>
 
+
+
 * Navigate to Zenodo's [page](https://zenodo.org/account/settings/github/) for managing GitHub and enable archival on the repository.
 
 <div><img src="https://github.com/LinkedEarth/RLeapFROGS/blob/main/static/module5/zendo_github_page.png?raw=true" alt="Zenodo GitHub" width=25% align="left"/></div>
 
+
+
+
 [GitHub tutorial for linking to Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 
 ---
-
-## Navigate to the login page for Zenodo
-

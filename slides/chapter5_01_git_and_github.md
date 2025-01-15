@@ -37,14 +37,13 @@ GitHub is a web-based platform built on top of Git, providing additional feature
 
 [Pythia - What is GitHub?](https://foundations.projectpythia.org/foundations/github/what-is-github.html)      
 
-[Pythia - What is a GitHub Repository?](https://foundations.projectpythia.org/foundations/github/github-repos.html)
-
 ---
 
 ## Git vs. GitHub
 
 * Git: A tool for version control and code management.
-* GitHub: A platform that uses Git while adding collaboration, hosting, and project management features.
+* GitHub: A web-based platform that uses Git while adding collaboration, hosting, and project management features.
+* GitHub Desktop: a free, user-friendly application that provides a graphical interface for working with Git and GitHub.
 
 They are often used together, but GitHub is just one of several services (like GitLab and Bitbucket) that can host Git repositories.
 
