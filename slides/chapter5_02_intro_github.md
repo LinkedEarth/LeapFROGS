@@ -14,6 +14,19 @@ In the last exercise, you will configure your GitHub account for secure logins v
 
 ---
 
+## Setting up a GitHub account
+
+<div><h1><img src="https://github.com/LinkedEarth/RLeapFROGS/blob/main/static/module5/github_signup.png?raw=true" alt="GitHub Logo" width=25% align="left"/></h1></div>
+
+Signing up for a new GitHub account is simple and free. After signing up you can create a new repository and try some of the features outlined in this lesson.
+
+The linked tutorial will guide you through some of the more advanced components of a GitHub account.
+
+[Account setup tutorial from Project Pythia](https://foundations.projectpythia.org/foundations/github/github-setup-advanced.html)
+
+
+---
+
 ## What is a repository?
 
 <div><h1><img src="https://docs.github.com/assets/cb-29762/images/help/repository/repo-create-global-nav-update.png" alt="GitHub Logo" width=25% align="left"/></h1></div>
@@ -84,17 +97,3 @@ A few use cases:
 Forking a repo creates a copy that will track the original. This method is primarily used for making changes to the original repo by users without direct access. This is accomplished by a pull request, which is covered in the next module.
 
 [Clong and Forking from project Pythia](https://foundations.projectpythia.org/foundations/github/github-cloning-forking.html)
-
----
-
-## Setting up a GitHub account
-
-<div><h1><img src="https://github.com/LinkedEarth/RLeapFROGS/blob/main/static/module5/github_signup.png?raw=true" alt="GitHub Logo" width=25% align="left"/></h1></div>
-
-Signing up for a new GitHub account is simple and free. After signing up you can create a new repository and try some of the features outlined in this lesson.
-
-The linked tutorial will guide you through some of the more advanced components of a GitHub account.
-
-[Account setup tutorial from Project Pythia](https://foundations.projectpythia.org/foundations/github/github-setup-advanced.html)
-
-
