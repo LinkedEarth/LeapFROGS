@@ -144,20 +144,62 @@ A step-by-step tutorial is given in the [GitHub documentation](https://docs.gith
 
 ## Make your repository citable
 
+### Citation files help users properly cite your work
+
+### Zenodo offers a DOI for specific software <strong>releases</strong>
+
+---
+
+## Citation file
+
+A `CITATION.cff` file makes citation of your repository easy. The <em>.cff</em> file format is both human- and machine-readable.
+
+After you have added a citation file to your repository, GitHub will provide citation options for users in both APA and BibTeX formats.
+
+Here is an example of a citation file ([from here](https://github.com/citation-file-format/citation-file-format)):
+
+```yaml
+cff-version: 1.2.0
+message: If you use this software, please cite it using these metadata.
+title: My Research Software
+abstract: This is my awesome research software. It does many things.
+authors:
+  - family-names: Druskat
+    given-names: Stephan
+    orcid: "https://orcid.org/1234-5678-9101-1121"
+  - name: "The Research Software project"
+version: 0.11.2
+date-released: "2021-07-18"
+identifiers:
+  - description: This is the collection of archived snapshots of all versions of My Research Software
+    type: doi
+    value: "10.5281/zenodo.123456"
+  - description: This is the archived snapshot of version 0.11.2 of My Research Software
+    type: doi
+    value: "10.5281/zenodo.123457"
+license: Apache-2.0
+repository-code: "https://github.com/citation-file-format/my-research-software"
+```
+
+[Learn more about citation files from GitHub](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)
+
+---
+
+## Zenodo
+
 Zenodo is most known for data archival. When depositing data with Zenodo, a digital object identifier (DOI) is issued. Creating a persistent reference to the data exactly as they exist at the time of upload and offering an object for citation in scientific publications. Zendo also offers this service for GitHub repositories.
 
-* Open the Zenodo [link](https://zenodo.org/login) and login <strong>with GitHub</strong>. You will need to <em>Authorize Zenodo</em> to access GitHub.
+Open the Zenodo [link](https://zenodo.org/login) and login <strong>with GitHub</strong>. You will need to <em>Authorize Zenodo</em> to access GitHub.
 
 <div><img src="https://github.com/LinkedEarth/RLeapFROGS/blob/main/static/module5/zenodo_login.png?raw=true" alt="Zenodo Login" width=25% align="left"/></div>
 
+---
 
+## Zenodo (continued)
 
-* Navigate to Zenodo's [page](https://zenodo.org/account/settings/github/) for managing GitHub and enable archival on the repository.
+Navigate to Zenodo's [page](https://zenodo.org/account/settings/github/) for managing GitHub and enable archival on the repository.
 
 <div><img src="https://github.com/LinkedEarth/RLeapFROGS/blob/main/static/module5/zendo_github_page.png?raw=true" alt="Zenodo GitHub" width=25% align="left"/></div>
-
-
-
 
 [GitHub tutorial for linking to Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 

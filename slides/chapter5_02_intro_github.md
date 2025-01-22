@@ -51,6 +51,20 @@ Additional resources: [Pythia - What is a GitHub Repository?](https://foundation
 
 A GitHub Issue is a note in a repository that describes a bug, suggests a new feature, or offers general feedback. Issues can be submitted by repository owners/collaborators to track tasks or by outside users with questions/suggestions.
 
+---
+
+### New and exisitng Issues
+
+* When planning to write a new issue, be sure to review existing Issues first
+  * Reading existing Issue posts may provide more context for your question/suggestion
+  * Search key terms (see image below)
+  * Upvote existing Issue that covers your bug/feature request
+* Only after careful review of existing Issues should you post a new Issue (see next slide)
+
+<div><h1><img src="https://github.com/LinkedEarth/LeapFROGS/blob/version/static/module5/GitHub_issues_search.PNG?raw=true" alt="Issues search1" width=25% align="left"/></h1></div>
+
+---
+
 **Creating an Issue**
 
 1. Go to the Issues tab.
