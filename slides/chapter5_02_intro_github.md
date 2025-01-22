@@ -61,7 +61,7 @@ A GitHub Issue is a note in a repository that describes a bug, suggests a new fe
   * Upvote existing Issue that covers your bug/feature request
 * Only after careful review of existing Issues should you post a new Issue (see next slide)
 
-<div><h1><img src="https://docs.github.com/assets/cb-29762/images/help/repository/repo-create-global-nav-update.png" alt="Issues search1" width=25% align="left"/></h1></div>
+<div><h1><img src="https://github.com/LinkedEarth/LeapFROGS/blob/version/static/module5/GitHub_issues_search.PNG?raw=true" alt="Issues search1" width=25% align="left"/></h1></div>
 
 ---
 
