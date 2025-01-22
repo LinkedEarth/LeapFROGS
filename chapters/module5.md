@@ -37,3 +37,9 @@ id: 5
 <slides source="chapter5_05_Advanced GitHub">
  
 </exercise>
+
+<exercise id="6" title="GitHub Desktop" type="slides">
+
+<slides source="chapter5_06_GitHubDesktop">
+ 
+</exercise>
