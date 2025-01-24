@@ -3,7 +3,7 @@ title: 'Module 5: Using GitHub for your research'
 description:
   "This module provides fundamental information about using GitHub for your research."
 prev: /module4
-next: null
+next: /module6
 type: chapter
 id: 5
 ---
