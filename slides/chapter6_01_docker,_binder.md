@@ -7,7 +7,7 @@ type: slides
 ---
 ## Containers
 
-Docker containers are like lightweight, portable "mini-computers" that can run software. They package everything a program needs—like its code, tools, and settings—so it works the same way everywhere, whether on your laptop, a server, or the cloud. Think of it as a way to ship an app and all its ingredients in one tidy box, making it easy to use and consistent across different machines.
+[Docker containers](https://www.docker.com/resources/what-container/) are like lightweight, portable "mini-computers" that can run software. They package everything a program needs—like its code, tools, and settings—so it works the same way everywhere, whether on your laptop, a server, or the cloud. Think of it as a way to ship an app and all its ingredients in one tidy box, making it easy to use and consistent across different machines.
 
 These virual environments can be thought of as a pyramid of requirements that support your workflow. An operating system and its libraries support a coding language and a few specific packages, which in turn support the script you wrote.
 
@@ -36,7 +36,7 @@ We will talk more about building containers in the next exercise. But, we can al
 ## Binder
 
 
-Binder is a tool that lets you run code and explore projects directly in your web browser without needing to install anything on your computer. It takes the code and its required software setup (like libraries and dependencies) and creates a temporary, ready-to-use environment for you. It's like clicking a link to instantly open a working lab where you can test and play with code—perfect for sharing and collaborating on projects.
+Binder is a set of tools that let you run code and explore projects directly in your web browser without needing to install anything on your computer. It takes the code and its required software setup (like libraries and dependencies) and creates a temporary, ready-to-use environment for you. It's like clicking a link to instantly open a working lab where you can test and play with code—perfect for sharing and collaborating on projects.
 
 ---
 
@@ -44,13 +44,15 @@ Binder is a tool that lets you run code and explore projects directly in your we
 
 Binder requires a only a few tweaks to your repository to get started. You will need to define the language, language version, and the packages used (and their versions for some languages). Together, this is called the environment.
 
-Binder will automate the container build using a free cloud resource called `MyBinder`.
+We will deploy the suite of Binder tools `myBinder` a free cloud resource.
 
 ---
 
 ## MyBinder
 
-MyBinder is a cloud resource that hosts containers. The platform allows users to share scripts in online IDEs (eg. Rstudio), interactive notebooks, (eg. Jupyter), and web apps (eg. Shiny).
+The relationship between Binder and [BindHub](https://github.com/jupyterhub/binderhub) is analagous to that of Git and GitHub, wherein the _Hub wraps the tools in a nifty user interface. [MyBinder](https://mybinder.org/) is a widely used, free instance on BinderHub.
+
+MyBinder is a Binder UI and cloud resource that hosts containers. The platform allows users to share scripts in online IDEs (eg. Rstudio), interactive notebooks, (eg. Jupyter), and web apps (eg. Shiny).
 
 ---
 
