@@ -27,29 +27,24 @@ A way to meet all of there requirements is to serve your code through a containe
 
 <exercise id="2" title="Introduction to Docker, Binder and myBinder" type="slides">
 
-<slides source="chapter5_02_intro_github">
-
 </exercise>
 
 <exercise id="3" title="Container repositories" type="slides">
 
+<slides source="chapter6_03_ContainerRepo">
 
 </exercise>
 
 <exercise id="4" title="Encapsulating your computational environment" type="slides">
-
-<slides source="chapter5_04_projectmanagement">
  
 </exercise>
 
 <exercise id="5" title="Creating Docker Containers" type="slides">
 
-<slides source="chapter5_05_Advanced GitHub">
+<slides source="chapter6_05_CreatingContainer">
  
 </exercise>
 
 <exercise id="6" title="Using Binder and myBinder" type="slides">
-
-<slides source="chapter5_06_GitHubDesktop">
  
 </exercise>
