@@ -8,9 +8,8 @@ type: slides
 
 ## Dockerfile
 
----
 
-## Docker compose
+A Dockerfile is a plain text script with instructions to build a Docker image, automating the setup of a consistent and portable environment for applications. All Dockerfiles define a base image from which to start. Upon the base image, files and dependencies are commonly added. Finally, the main process (or Entrypoint) is defined.
 
 ---
 
