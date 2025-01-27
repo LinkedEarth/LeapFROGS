@@ -202,5 +202,3 @@ Navigate to Zenodo's [page](https://zenodo.org/account/settings/github/) for man
 <div><img src="https://github.com/LinkedEarth/RLeapFROGS/blob/main/static/module5/zendo_github_page.png?raw=true" alt="Zenodo GitHub" width=25% align="left"/></div>
 
 [GitHub tutorial for linking to Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
-
----
