@@ -21,11 +21,13 @@ Sharing reproducible scientific workflows involves creating, documenting, and di
 * **Reusability**: Design workflows to be modular and generalizable, so they can be adapted to other datasets or research questions.
 * **FAIR Principles**: Ensure workflows and data adhere to principles of being Findable, Accessible, Interoperable, and Reusable.
 
-A way to meet all of there requirements is to serve your code through a container, which we will cover in this module. 
+A way to meet all of these requirements is to serve your code through a container, which we will cover in this module. 
 
 </exercise>
 
 <exercise id="2" title="Introduction to Docker, Binder and myBinder" type="slides">
+
+<slides source="chapter6_01_docker,_binder">
 
 </exercise>
 
