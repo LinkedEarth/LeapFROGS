@@ -50,3 +50,26 @@ A way to meet all of these requirements is to serve your code through a containe
 <exercise id="6" title="Using Binder and myBinder" type="slides">
  
 </exercise>
+
+<exercise id="7" title="Test your understanding">
+
+multiple choice
+
+</exercise>
+
+<exercise id="8" title="Hands-on exercise">
+
+Using an existing repository (e.g., the one you created in Module 5):
+
+1. Create an environment file (you may do so by using branches for practice)
+
+2. Set up your notebook using [myBinder](https://mybinder.org). Make sure that your notebook executes on the site. Sometimes this requires a lot of trial and error.
+
+3. Update your README with a myBinder badge for a one-click sharing of your workflows.
+
+4. Using a GitHub action, create a Docker container and make it available on [Quay.io](https://quay.io). You may use this [workflow file](https://github.com/LinkedEarth/Pyleoclim_util/blob/master/.github/workflows/build.yml)
+as an inspiration. 
+
+5. Update your README with instructions on how to run the Docker container. Make sure it works on your machine as well!
+
+</exercise>
