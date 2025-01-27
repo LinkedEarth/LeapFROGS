@@ -29,7 +29,7 @@ A container image is typically built from a base image. For example, to run an R
 * a rocker image, which already contains Ubuntu and R, then install ggplot2 and dplyr
 * the rocker/tidyverse image, which contains all the requirements to run your code
 
-We can automate the building on a container image through GitHub, using `Binder`.
+We will talk more about building containers in the next exercise. But, we can also automate the building on a container image through GitHub, using `Binder`.
 
 ---
 
@@ -56,4 +56,4 @@ MyBinder is a cloud resource that hosts containers. The platform allows users to
 
 ## Getting started
 
-Follow the link [here](https://the-turing-way.netlify.app/communication/binder/zero-to-binder.html) to get started with Binder in R, Python, or Julia.
+You will learn more about implementing Binder in your repo in the last exercise.
