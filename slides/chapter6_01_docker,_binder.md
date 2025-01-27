@@ -2,7 +2,7 @@
 type: slides
 ---
 
-<div><h1><img src="https://logos-world.net/wp-content/uploads/2021/02/Docker-Logo-2017-present.jpg" alt="Docker Logo" width=25% align="left"/> Lesson 1<br>Docker, Binder, and MyBinder</h1></div>
+<div><h1><img src="https://raw.githubusercontent.com/docker-library/docs/c350af05d3fac7b5c3f6327ac82fe4d990d8729c/docker/logo.png" alt="Docker Logo" width=25% align="left"/> Lesson 1<br>Docker, Binder, and MyBinder</h1></div>
 
 ---
 ## Containers
