@@ -20,6 +20,7 @@ David Edge <a href="https://orcid.org/0000-0001-6938-2850">
 0000-0001-6938-2850
 </a>
 
+
 ## Tips for contributing
 
 If you would like to see some content on the platform, [open an issue](https://github.com/LinkedEarth/LeapFROGS/issues). 
