@@ -1,0 +1,41 @@
+name: Build and Push Container to Quay.io
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python and Conda
+      - name: Set up Python and Conda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: my-geoscience-env
+          environment-file: environment.yml
+          auto-activate-base: false
+
+      # Step 3: Package the Conda environment as a tarball
+      - name: Export Conda environment
+        run: |
+          conda pack -n my-geoscience-env -o environment.tar.gz
+
+      # Step 4: Log in to Quay.io
+      - name: Log in to Quay.io
+        run: |
+          echo "${{ secrets.QUAY_PASSWORD }}" | docker login quay.io -u "${{ secrets.QUAY_USERNAME }}" --password-stdin
+
+      # Step 5: Build and push the container to Quay.io
+      - name: Build and Push to Quay.io
+        run: |
+          echo "Building container image"
+          docker build . -t quay.io/${{ secrets.QUAY_USERNAME }}/my-geoscience-env:latest \
+            --build-arg CONDA_TARBALL=environment.tar.gz
+          echo "Pushing container image"
+          docker push quay.io/${{ secrets.QUAY_USERNAME }}/my-geoscience-env:latest
