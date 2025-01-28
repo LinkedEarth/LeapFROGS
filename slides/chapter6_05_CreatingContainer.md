@@ -11,6 +11,8 @@ type: slides
 
 A Dockerfile is a plain text script with instructions to build a Docker image, automating the setup of a consistent and portable environment for applications. All Dockerfiles define a base image from which to start. Upon the base image, files and dependencies are commonly added. Finally, the main process (or Entrypoint) is defined.
 
+We will focus on building containers from GitHub. To gain more granular access you will want to read the full documentation for building with Dockerfiles [here](https://docs.docker.com/get-started/docker-concepts/building-images/).
+
 ---
 
 ## Creating Containers with GitHub Actions
