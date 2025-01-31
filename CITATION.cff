@@ -1,0 +1,16 @@
+cff-version: 0.1.0.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Khider"
+    given-names: "Deborah"
+    orcid: "https://orcid.org/0000-0001-7501-8430"
+  - family-names: "Emile-Geay"
+    given-names: "Julien"
+    orcid: "https://orcid.org/0000-0001-5920-4751"
+  - family-names: "Edge"
+    given-names: "David"
+    orcid: "https://orcid.org/0000-0001-6938-2850"
+title: "LeapFROGS: A learning platform for Python, time series analysis and open science publishing"
+version: v0.1.0
+date-released: 2025-01-31
+url: "https://github.com/LinkedEarth/LeapFROGS"
