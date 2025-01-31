@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/753371607.svg)](https://doi.org/10.5281/zenodo.14783497)
+
 # Welcome to LeapFROGS
 
 ## Objective
