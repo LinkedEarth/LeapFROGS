@@ -38,6 +38,8 @@ A way to meet all of these requirements is to serve your code through a containe
 </exercise>
 
 <exercise id="4" title="Encapsulating your computational environment" type="slides">
+
+<slides source="chapter6_04_Environment">
  
 </exercise>
 
