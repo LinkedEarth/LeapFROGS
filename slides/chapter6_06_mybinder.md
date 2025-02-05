@@ -13,91 +13,46 @@ Before using myBinder, your project should be in a public GitHub repository with
 * Your Python scripts or Jupyter notebooks.
 * An `environment.yml` file specifying dependencies.
 
----
+An example repository structure is shown below:
 
-## Creating Containers with GitHub Actions
-
-### Why use GitHub actions?
-
-* GitHub Actions automates workflows directly from your GitHub repository.
-* It can automatically build and push containers to repositories like DockerHub or Quay.io whenever you update your project.
+<div><h1><img src="https://github.com/LinkedEarth/LeapFROGS/blob/main/static/module6/FileStructure.png?raw=true" alt="GitHub repository structure" width=50% align="center"/></h1></div>
 
 ---
 
-### Key Steps
+## Linking the Repository to myBinder
 
-1. Prepare Your Repository
+1. Go to [myBinder.org](https://mybinder.org).
+2. Enter your GitHub repository URL.
+3. Set the branch to main (or the relevant branch name).
+4. Ensure Path to a notebook file is correct (e.g., notebooks/analysis.ipynb).
+5. Click Launch. myBinder will build your environment and provide a link for sharing.
 
-Ensure your repository includes:
-
-* Code or scripts: Your analysis or workflow files.
-* Environment file (e.g., environment.yml): Lists dependencies for the container.
-
----
-
-2. Set Up a GitHub Actions Workflow
-
-* **Create the Workflow File**: Add a YAML file in `.github/workflows/`, for example, `build-container.yml`.
-* Example Workflow: [Here](https://github.com/LinkedEarth/LeapFROGS/blob/main/static/module6/build-container.yml)’s a minimal GitHub Actions workflow to create a container using the environment.yml file. 
-
-Have a look at the file and click on the next slide to learn more about some of the key features. 
+<div><h1><img src="https://github.com/LinkedEarth/LeapFROGS/blob/main/static/module6/myBinder.png?raw=true" alt="myBinder" width=50% align="center"/></h1></div>
 
 ---
 
-### Key features
+## Creating a myBinder Badge
 
-1. Repository Integration: 
-  * Automatically builds and pushes a container image to Quay.io whenever changes are pushed to the main branch.
-  * Seamlessly integrates with GitHub, ensuring your environment stays up-to-date with your codebase.
-2. Environment-First Workflow:
-  * Uses the `environment.yml` file
-3. Secure Authentication:
-  * Leverages [GitHub Secrets](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) for securely storing and using Quay.io credentials (`QUAY_USERNAME` and `QUAY_PASSWORD`).
-4. Pushes to Quay.io:
-  * Automatically uploads the container image to your Quay.io repository with a customizable tag (e.g., `quay.io/<username>/my-geoscience-env:latest`).
-5. Scalability:
-  * Supports versioned containers by modifying the :latest tag (e.g., :v1.0.0).
-  * Works with private and public repositories in Quay.io, catering to secure or open science projects.
-6. Reproducibility:
-  * By exporting and using the `environment.yml` file, collaborators can precisely reproduce your computational environment.
+To allow others to easily launch your environment, add a myBinder badge to your repository’s README.md.
+
+`[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/username/repository/main)`
+
+Replace `username` and `repository` with your **GitHub username** and **repository name**.
 
 ---
 
-### Why This is Useful for Geoscientists
+## Testing and Debugging Common Issues
 
-* Focuses on reproducible science without requiring deep technical knowledge of Docker.
-* Makes sharing and collaboration on scientific workflows seamless.
-* Ensures that complex dependencies (e.g., geoscience libraries) are bundled for consistent analysis across systems.
+### Binder Takes Too Long to Build
 
----
+Solution: Reduce dependencies in `environment.yml`. Try removing heavy packages or installing them via pip instead.
 
-## What are GitHub secrets?
+### Notebook Kernel Died Unexpectedly
 
-[GitHub Secrets](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) are a secure way to store sensitive information (e.g., passwords, API tokens, or access credentials) in your GitHub repository. They are encrypted and only accessible by workflows running in your repository.
+Solution: Ensure jupyter is included in environment.yml and that Python version compatibility is correct.
 
-### Why Use Them?
-* **Security**: Secrets prevent sensitive data from being exposed in your code or workflow files.
-* **Automation**: They allow workflows to authenticate with external services (e.g., DockerHub, Quay.io) securely.
+### Binder Build Fails Due to Package Conflicts
 
----
-
-### How to Set Up GitHub Secrets
-
-1. Go to your GitHub repository.
-2. Navigate to **Settings > Secrets and variables** and **Actions**.
-3. Click `New repository secret`.
-4. Enter a name (e.g., `QUAY_USERNAME`) and the secret value.
-5. Save the secret.
-
----
-
-### Using Secrets in Workflows
-
-You can reference secrets in your GitHub Actions workflow like this:
-
-```
-with:
-  username: ${{ secrets.QUAY_USERNAME }}
-  password: ${{ secrets.QUAY_PASSWORD }}
-```
-
+Solution:
+* Use conda lock to generate a lockfile that ensures package versions work together.
+* Manually check for conflicts using: `conda install --dry-run <package-name>`
