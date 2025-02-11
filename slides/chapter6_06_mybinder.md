@@ -56,3 +56,28 @@ Solution: Ensure jupyter is included in environment.yml and that Python version 
 Solution:
 * Use conda lock to generate a lockfile that ensures package versions work together.
 * Manually check for conflicts using: `conda install --dry-run <package-name>`
+
+---
+
+## Advanced: Using a container for myBinder
+
+You can configure myBinder to use an existing container hosted on Quay.io or DockerHub instead of letting it build an environment from an `environment.yml` or `requirements.txt` file. This can significantly speed up launch times and ensure full control over dependencies.
+
+### Steps to Set Up myBinder with a container
+
+For the purpose of these instructions, we are using Quay.io
+
+1. Build and Push a container to Quay.io
+2. Create a `binder/` Directory in Your GitHub Repo and in this repository, add the following:
+    * A [`Dockerfile`](https://github.com/khider/coral-visualization/blob/main/binder/Dockerfile) that tells myBinder to pull from Quay.io. 
+    * [`config.json` file](https://github.com/khider/coral-visualization/blob/main/binder/config.json), which explicitly tells myBinder which container registry to pull from.
+3. Push to GitHub and generate a myBinder link in the same way as before.
+
+---
+
+## Why Use Quay.io with myBinder?
+
+* **Faster start times** – Prebuilt images reduce build time.
+* **Reproducibility** – Ensures the exact same runtime environment every time.
+* **Custom configurations** – Install specialized system libraries.
+* **Improved caching** – Binder can reuse layers from Quay.io.
