@@ -64,8 +64,8 @@ const Layout = ({ isHome, title, description, children }) => {
                                         <H3>About me</H3>
                                         {meta.showProfileImage && (
                                             <img
-                                                src="https://github.com/LinkedEarth/Logos/blob/master/LinkedEarth_Square_Small.png?raw=true"
-                                                alt=""
+                                                src="https://github.com/LinkedEarth/Logos/blob/master/LinkedEarth/LinkedEarth_Square_Small.png?raw=true"
+                                                alt="LinkedEarth logo"
                                                 className={classes.profile}
                                             />
                                         )}
