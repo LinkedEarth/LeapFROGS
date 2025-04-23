@@ -3,7 +3,7 @@ title: 'Module 6: Sharing Reproducible Workflows'
 description:
   "This module provides fundamental information about using containers to share your research."
 prev: /module5
-next: null
+next: /module7
 type: chapter
 id: 6
 ---
