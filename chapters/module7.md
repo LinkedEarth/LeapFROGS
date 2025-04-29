@@ -104,6 +104,7 @@ Ask a colleague: Would you enjoy using this interface?
 
 * Avoid exposing internals that you might want to change.
 * Keep your API minimal but extensible.
+* Think about how many dependencies (e.g., `Pandas`) you might have and whether these are maintained as your code evolves. The fewer, the better. If you only have one function that you need from a package, it might be better to rewrite it. The more maintained, the better. You don't want to integrate a package that do not have support for future versions of Python. 
 
 Public APIs are promises. Once people depend on them, they are hard to break.
 
