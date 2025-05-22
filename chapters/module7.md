@@ -52,6 +52,8 @@ Unlike repositories, which support development, registries allow for your softwa
 
 # 1. Getting started
 
+Slides are available [here](https://docs.google.com/presentation/d/1hSY-ZSmho6QBiM2OzpAMrxst56DuHIXHWZynk0uy-78/edit?usp=sharing).
+
 ## User APIs
 
 An API (Application Programming Interface) for a software package is the set of functions, classes, and methods that the package exposes for users to interact with its features—essentially, it's the public interface that lets others use the package without needing to understand its internal code.
@@ -138,6 +140,8 @@ An excellent tutorial on Python Package Structure is provided by [PyOpenSci](htt
 
 # 2. Telling users how to use your software
 
+Slides can be accessed [here](https://docs.google.com/presentation/d/1MPjirpLG__MyU_Z5TQ9R-JRl0RN9ySGD9AKDvA79sL0/edit?usp=sharing). 
+
 ## Documentation
 
 The documentation  is simply a record of what each function does, what are the inputs and outputs, and a minimally viable example, often with fake or simple data. Most software documentation are built from docstrings. An excellent tutorial on how to [build your package documentation](https://www.pyopensci.org/python-package-guide/documentation/index.html#). 
@@ -157,6 +161,8 @@ Other science galleries you may want to look at:
 - [Pythia Cookbooks Gallery](https://cookbooks.projectpythia.org), maintained by Project Pythia, provide example workflows on more advanced and domain-specific problems faced by the Pythia community (Big Data Geoscience).
 
 # 3. Testing and continuous integration
+
+Slides on the subject are available [here](https://docs.google.com/presentation/d/1NT1vMhAlCle4n6EfGnqcLJGv4ZtJO2p9FZdcLYWQuoY/edit?usp=sharing). 
 
 Unit tests are essential for ensuring that each part of your code behaves as expected, making it easier to catch bugs early, maintain code quality, and safely refactor over time. Using a tool like [`pytest`](https://docs.pytest.org/en/stable/) simplifies writing and running tests by offering a clean, readable syntax and powerful features like fixtures and parameterized testing. It helps developers confidently validate their code and contributes to more reliable and robust software.
 
