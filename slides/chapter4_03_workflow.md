@@ -13,13 +13,13 @@ If your workflow is sketched but you are not planning to provide an executable v
 If you are planning to provide an executable workflow, several options are available:
 1. Provide an electronic Notebook. Make sure to indicate any manual steps in the text narrative of the notebook.
 2. Provide a series of scripts. In this case, make sure you have a "read me" file that describes in which order to execute and what are the expected output of each script. 
-In both cases, a sketch of the workflow could still be useful and should be shared in the same repository as the executable workflow. There are several options but a popular one is Github, which allows for many developers to work together and has verion control.
+In both cases, a sketch of the workflow could still be useful and should be shared in the same repository as the executable workflow. There are several options but a popular one is Github, which allows for many developers to work together and has version control.
 
 <h3>Why is this important? </h3>
 
-Sharing your workflow in publically accessible repository enables other (and yourself) researchers to use your original workflow for reprocublity and replicability studies or apply it to other studies. 
+Sharing your workflow in publicly accessible repository enables other (and yourself) researchers to use your original workflow for reprocublity and replicability studies or apply it to other studies. 
 
-Version control allows to easily track changes in the workflow (made by you or other collaborators), and rolls back to a prior stable version if needed or runs continous integration to ensure that introduced changes are still giving proper results. Many platforms, including GitHub, provide other collaboration tools such as issue tracker and project management tools that you will learn to use in subsequent modules. 
+Version control allows to easily track changes in the workflow (made by you or other collaborators), and rolls back to a prior stable version if needed or runs continuous integration to ensure that introduced changes are still giving proper results. Many platforms, including GitHub, provide other collaboration tools such as issue tracker and project management tools that you will learn to use in subsequent modules. 
 
 ---
 

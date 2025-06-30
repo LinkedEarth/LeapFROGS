@@ -53,7 +53,7 @@ A GitHub Issue is a note in a repository that describes a bug, suggests a new fe
 
 ---
 
-### New and exisitng Issues
+### New and existing Issues
 
 * When planning to write a new issue, be sure to review existing Issues first
   * Reading existing Issue posts may provide more context for your question/suggestion

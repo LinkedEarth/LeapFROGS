@@ -16,8 +16,8 @@ def map_ukraine(highlight_color='orange'):
         
         Outputs:
         -------
-        - fig: the resuling Matplotlib Figure object
-        - ax: the resuling Matplotlib Axes object
+        - fig: the resulting Matplotlib Figure object
+        - ax: the resulting Matplotlib Axes object
     '''
     
     latN = 54; latS = 43
@@ -58,5 +58,5 @@ latK, lonK = 50.45, 30.523333
 # add a dot and a label for the city of Kyiv
 ax.plot(lonK,latK,color="k", marker="o", markersize= 10,transform=ccrs.PlateCarree())
 ax.text(lonK+0.5,latK+0.5,"Kyiv", transform=ccrs.PlateCarree(),
-        va='top', ha='right', fontweight='bold') # ofset the text from the city itself, for clarity
+        va='top', ha='right', fontweight='bold') # offset the text from the city itself, for clarity
 plt.show()

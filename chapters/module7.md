@@ -153,7 +153,7 @@ Note that one of the best ways to get started is to look at a documentation for 
 Tutorials tend to go more in depth about the concepts and give examples about scientific workflows that can be constructed from the various functionalities. PyOpenSci provides a good overview on [tutorials](https://www.pyopensci.org/python-package-guide/documentation/write-user-documentation/create-package-tutorials.html). We recommend that you use annotated [Jupyer Notebook](https://jupyter.org) to describe the workflows that you can coalesce in a [Jupyter Book](https://jupyterbook.org/en/stable/intro.html). Jupyter Book can be made fully executable through [myBinder](https://mybinder.org) so your users can also experiment with your code. We provide a tutorial on how to setup and use myBinder [here](https://linked.earth/LeapFROGS/module6). 
 
 Here is a list of tutorials maintained by LinkedEarth:
-- [Tutorials for Pyleoclim](http://linked.earth/PyleoTutorials/intro.html), a sofware package for the analysis of paleoclimate data. 
+- [Tutorials for Pyleoclim](http://linked.earth/PyleoTutorials/intro.html), a software package for the analysis of paleoclimate data. 
 - [Tutorials for PyLiPD](http://linked.earth/pylipdTutorials/intro.html), a software package to work with datasets in the LiPD format. 
 
 Other science galleries you may want to look at:
@@ -166,7 +166,7 @@ Slides on the subject are available [here](https://docs.google.com/presentation/
 
 Unit tests are essential for ensuring that each part of your code behaves as expected, making it easier to catch bugs early, maintain code quality, and safely refactor over time. Using a tool like [`pytest`](https://docs.pytest.org/en/stable/) simplifies writing and running tests by offering a clean, readable syntax and powerful features like fixtures and parameterized testing. It helps developers confidently validate their code and contributes to more reliable and robust software.
 
-These tests can be run on your local machine or integrated into a software registry such as Github. This is called continous integration (CI).
+These tests can be run on your local machine or integrated into a software registry such as Github. This is called continuous integration (CI).
 
 To learn how to write tests in Python and use CI, have a look at [this tutorial](https://www.pyopensci.org/python-package-guide/tests/index.html) by PyOpenSci. 
 
@@ -195,7 +195,7 @@ We also recommend that you [Build a docker container](https://linked.earth/LeapF
 
 <exercise id="5" title="Additional Rsources">
 
-Have a look at these resouces to help you package your software:
+Have a look at these resources to help you package your software:
 - [PyPi](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
 - [Anaconda](https://docs.conda.io/projects/conda-build/en/latest/user-guide/getting-started.html)
 - [PyOpenSci](https://www.pyopensci.org/python-packaging-science.html)

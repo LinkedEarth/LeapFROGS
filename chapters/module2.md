@@ -17,7 +17,7 @@ Most (if not all) of the scientific libraries that you will be using throughout 
 This module is divided as follows:
 - Section 2 will give you an introduction to Jupyter and the use of Jupyter Notebooks
 - Section 3 and 4 detail information about Numpy, a library to deal with arrays. Most (if not all) packages in the Scientific Python Stack are built on top of Numpy
-- Section 5 gives a basic introduction to Pandas, a ubiquituous library in data science. Many other packages will take Pandas structures as input
+- Section 5 gives a basic introduction to Pandas, a ubiquitous library in data science. Many other packages will take Pandas structures as input
 - Section 6 gives information about Matplotlib, a standard plotting library
 - Section 7 deals with Cartopy for mapping
 - Section 8 lists other libraries that could be useful for your work.  
@@ -495,7 +495,7 @@ Notice that the map_ukraine() function has one argument, called highlight_color.
 
 </codeblock>
 
-A common use case for mappping in the paleosciences is to display the location of a point of interest, e.g. the site of sample collection. This is done very easily by re-using Matplotlib functions like [text](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.text.html?highlight=text#examples-using-matplotlib-axes-axes-text). On the map below we add a dot and a label for the city of Kyiv:
+A common use case for mapping in the paleosciences is to display the location of a point of interest, e.g. the site of sample collection. This is done very easily by re-using Matplotlib functions like [text](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.text.html?highlight=text#examples-using-matplotlib-axes-axes-text). On the map below we add a dot and a label for the city of Kyiv:
 
 
 <codeblock id="02_26">

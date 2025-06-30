@@ -9,7 +9,7 @@ type: slides
 
 [Docker containers](https://www.docker.com/resources/what-container/) are like lightweight, portable "mini-computers" that can run software. They package everything a program needs—like its code, tools, and settings—so it works the same way everywhere, whether on your laptop, a server, or the cloud. Think of it as a way to ship an app and all its ingredients in one tidy box, making it easy to use and consistent across different machines.
 
-These virual environments can be thought of as a pyramid of requirements that support your workflow. An operating system and its libraries support a coding language and a few specific packages, which in turn support the script you wrote.
+These virtual environments can be thought of as a pyramid of requirements that support your workflow. An operating system and its libraries support a coding language and a few specific packages, which in turn support the script you wrote.
 
 ---
 
@@ -17,7 +17,7 @@ These virual environments can be thought of as a pyramid of requirements that su
 
 Docker is the software that builds and runs containers. Podman is another, less commonly used, tool for working with containers.
 
-Containers are built from images. Images are built from Dockerfiles or GitHub Actions (amoungst other options).
+Containers are built from images. Images are built from Dockerfiles or GitHub Actions (amongst other options).
 
 ---
 
@@ -50,7 +50,7 @@ We will deploy the suite of Binder tools `myBinder` a free cloud resource.
 
 ## MyBinder
 
-The relationship between Binder and [BindHub](https://github.com/jupyterhub/binderhub) is analagous to that of Git and GitHub, wherein the _Hub wraps the tools in a nifty user interface. [MyBinder](https://mybinder.org/) is a widely used, free instance on BinderHub.
+The relationship between Binder and [BindHub](https://github.com/jupyterhub/binderhub) is analogous to that of Git and GitHub, wherein the _Hub wraps the tools in a nifty user interface. [MyBinder](https://mybinder.org/) is a widely used, free instance on BinderHub.
 
 MyBinder is a Binder UI and cloud resource that hosts containers. The platform allows users to share scripts in online IDEs (eg. Rstudio), interactive notebooks, (eg. Jupyter), and web apps (eg. Shiny).
 

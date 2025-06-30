@@ -129,7 +129,7 @@ You can edit files directly on GitHub or upload new ones to this branch.
 
 ## Pull Request
 
-After you have forked a repo or created a new branch into your own repository, you are free to fix bugs or add features. After improving the code you can offer your fork as an improved version back to the orginal repo owners (or `main`/`master` branch). This offer is called a `pull request`.
+After you have forked a repo or created a new branch into your own repository, you are free to fix bugs or add features. After improving the code you can offer your fork as an improved version back to the original repo owners (or `main`/`master` branch). This offer is called a `pull request`.
 
 [Pull Requests from project Pythia](https://foundations.projectpythia.org/foundations/github/github-pull-request.html)
 

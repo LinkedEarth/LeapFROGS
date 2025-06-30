@@ -136,7 +136,7 @@ Storing a version history is the role of Git's version control, not Discussions.
 </opt>
 </choice>
 
-The act of downloading a local copy of the repository, linked to the original respository for syncing changing is called:
+The act of downloading a local copy of the repository, linked to the original repository for syncing changing is called:
 
 <choice id="05-07">
 <opt text="Forking">

@@ -51,7 +51,7 @@ Data should be identified with a persistent unique identifier. You can usually g
 <opt text="Software">
 Software (and possible, each version of the software) should be identified with a unique, persistent identifier
 </opt>
-<opt text="Worflow">
+<opt text="Workflow">
 Workflows should be identified with a unique, persistent identifier
 </opt>
 <opt text="Authors">

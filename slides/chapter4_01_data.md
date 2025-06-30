@@ -12,7 +12,7 @@ This could be a general, non-curated repository such as Figshare or a curated, d
 
 <h3>Why is this important? </h3>
 
-Sharing your data in publically accessible repository enables other (and yourself) researchers to use your original data for reprocublity and replicability studies or extend your findings. 
+Sharing your data in publicly accessible repository enables other (and yourself) researchers to use your original data for reproducibility and replicability studies or extend your findings. 
 
 ---
 
@@ -42,7 +42,7 @@ The citation should include a unique persistent identifier for the data.
 
 <h3>Why is this important? </h3>
 
-Citations help you get recognized for all of your work. Additionaly, it is an integral part of reproducibility since it can give information about the provenance of the data. 
+Citations help you get recognized for all of your work. Additionally, it is an integral part of reproducibility since it can give information about the provenance of the data. 
 
 ---
 

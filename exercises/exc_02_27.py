@@ -16,8 +16,8 @@ def map_ukraine(highlight_color='orange'):
         
         Outputs:
         -------
-        - fig: the resuling Matplotlib Figure object
-        - ax: the resuling Matplotlib Axes object
+        - fig: the resulting Matplotlib Figure object
+        - ax: the resulting Matplotlib Axes object
     '''
     
     latN = 54; latS = 43

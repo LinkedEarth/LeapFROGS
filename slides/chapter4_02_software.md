@@ -8,13 +8,13 @@ type: slides
 
 <h2> Identify a publicly accessible repository with version control </h2>
 
-There are several options but a popular one is Github, which allows for many developers to work together and has verion control. 
+There are several options but a popular one is Github, which allows for many developers to work together and has version control. 
 
 <h3>Why is this important? </h3>
 
-Sharing your software in publically accessible repository enables other (and yourself) researchers to use your original software for reprocublity and replicability studies or apply it to other studies. 
+Sharing your software in publicly accessible repository enables other (and yourself) researchers to use your original software for reprocublity and replicability studies or apply it to other studies. 
 
-Version control allows to easily track changes in the software (made by you or other collaborators), and rolls back to a prior stable version if needed or runs continous integration to ensure that introduced changes are still giving proper results. Many platforms, including GitHub, provide other collaboration tools such as issue tracker and project management tools that you will learn to use in subsequent modules. 
+Version control allows to easily track changes in the software (made by you or other collaborators), and rolls back to a prior stable version if needed or runs continuous integration to ensure that introduced changes are still giving proper results. Many platforms, including GitHub, provide other collaboration tools such as issue tracker and project management tools that you will learn to use in subsequent modules. 
 
 ---
 
@@ -49,7 +49,7 @@ In most cases, you will have to provide a citation for your software. To do so, 
 
 <h3>Why is this important? </h3>
 
-Citation helps you get credit for all of your research. More cricitally, software citation should always include a version of the software used in the work for reproducibility. 
+Citation helps you get credit for all of your research. More critically, software citation should always include a version of the software used in the work for reproducibility. 
 
 ---
 
